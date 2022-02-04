@@ -111,7 +111,9 @@ To define dividers and text alignment in the tables, define this for every row u
 For example - |:------ (left aligned), :------| (right aligned) and |:------| (center aligned)
 
 ```md
-  | Alignment | Script |
+| Light Color | Current State | Next State |
+|:------ | :------ |:------ |
+| Green | Yellow | Red |
 
 ```
 
