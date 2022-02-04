@@ -1,16 +1,16 @@
 
-### Markdown Scripting
+## Markdown Scripting
 
 ---
 
-<p> We can use markdown scripting to write great software documentation. Markdown is a simplified markup language used for formatting text. <p>
+We can use markdown scripting to write great software documentation. Markdown is a simplified markup language used for formatting text.
 
-<p> It Provides a means that converts to HTML and renders to the page. However, markdown is much simpler to use and easier to read. </p>
+It Provides a means that converts to HTML and renders to the page. However, markdown is much simpler to use and easier to read.
 
-<p> Markdown files have an extension of .md </p>
+Markdown files have an extension of .md
 
 
-## Markdown Language Syntax
+### Markdown Language Syntax
 
 - The “#” symbol indicates the font size of a text element for example a statement like “# readme” is rendered in HTML as a h1 element tag and “## readme” as a h2 element tag and so on and so forth. Below is an example : 
 
@@ -58,7 +58,7 @@ while wrapping a text around one * makes the text italic.
 
 ---
 
-## Block Quotes
+### Block Quotes
 
 -	Use “>” to wrap your text in order to create blockquotes. Here a sample with a Steve Jobs quote.
 
@@ -66,7 +66,7 @@ while wrapping a text around one * makes the text italic.
 “You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.”
 >
 
-#### Unordered List
+### Unordered List
 
 -	Use a single dash to create an unordered list. For example 
 
@@ -74,13 +74,13 @@ while wrapping a text around one * makes the text italic.
   - Team 2
   - etc
 
-  #### Hyperlinking Text
+### Hyperlinking Text
 
   -	Wrap your h1 and h2 tags around square brackets to make it a hyperlink that scrolls to where the header content section is on the page. Add parentheses after the tag followed by the link-URL i.e. 
 
   `[General Installation] (#general-installation)`
 
-    #### Adding Images
+### Adding Images
 
   -	To add an image, start the text with an “!” mark. Here is an example:-
 
@@ -90,7 +90,7 @@ while wrapping a text around one * makes the text italic.
 
   -	Most HTML tags such as <br> , <p> also work with markdown automatically.
 
-  -	[x] and [ ] are used to display checkboxes (checked and unchecked). For example:-
+  -	[x] and [] are used to display checkboxes (checked and unchecked). For example:-
 
   ```
     #### Confirm Terms and Conditions
@@ -98,11 +98,48 @@ while wrapping a text around one * makes the text italic.
     [ ] Yes
   ```
 
-  #### Creating Tables
+### Creating Tables
 
   - Use dashes to symbolize the columns and rows of a table. An example would explain this easier. 
 
   - To define the text alignment in the tables, define this for every row using a colon followed by dashes. 
+  For example - |:------ (left aligned), :------| (right aligned) and |:------| (center aligned)
 
-| Light Color
+```md
+  | Alignment | Script |
 
+```
+
+| Light Color | Current State | Next State
+|:------ | |:------ | |:------ 
+| Green | Yellow | Red
+
+### Creating collapsible content  
+
+Use HTML details and summary tags to create an accordion. For example 
+
+```md
+
+<details>
+	<summary> Section Header </summary>
+    Section Body Text. More information here
+</details>
+
+```
+
+<details>
+	<summary> Section Header </summary>
+    Section Body Text. More information here. 
+</details>
+
+
+### Additional Information
+
+- Markdown also supports emojis  and formulas. 
+
+### Research Links
+
+1. [Latex](https://www.latex-project.org/)
+1. [Mermaid ](https://mermaid-js.github.io/mermaid/#/)
+1. [Python RST](https://en.wikipedia.org/wiki/ReStructuredText)
+1. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
