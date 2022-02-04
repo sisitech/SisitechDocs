@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
 ```
 ### Software Documentation
 
-- Learn more about markdown scripting [here](/docs/markdown.md)
+- Learn more about markdown scripting [here](./markdown.md)
  <br>
  
 - Documentation as Code Principle
@@ -89,3 +89,12 @@ class MyApp extends StatelessWidget {
   > Lifecycle Hooks  
   > Internationalization - Translation
  
+#### Additional Information
+
+To run the markdown script to a static website, use [MkDocs](https://www.mkdocs.org/) by running the code 
+
+```md
+
+mkdocs serve
+
+```
