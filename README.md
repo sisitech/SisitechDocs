@@ -81,7 +81,7 @@ class MyApp extends StatelessWidget {
     Breaking changes leads to upgrade of major versions
 	
 #### Angular – Component Library
-   > Angular Ivy  
+   > Angular Ivy  `npm i -g @angular/cli@latestng update`
   > Angular Content Projection  
   > Lifecycle Hooks  
 > Internationalization - Translation
