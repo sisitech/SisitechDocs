@@ -146,13 +146,13 @@ Markdown also supports emojis  and formulas.
 
 ### Using mermaid
 
-``` mermaid
+```mermaid
 graph LR
   A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
+  B -->|Yes| C[Hmm...]
   C --> D[Debug];
   D --> B;
-  B ---->|No| E[Yay!];
+  B ---->|No| E[Yay!]; 
 ```
 
 
