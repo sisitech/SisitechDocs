@@ -3,7 +3,13 @@ site_name: Sisitech Docs
 
 theme: 
   name: material
-  
+  palette:
+    scheme: default
+    primary: teal
+
+extra_css:
+  - css/extra.css
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
