@@ -2,17 +2,18 @@
 # Research Topics
 
 **Table of Contents:**
-[Form Builder](#form-builder)
 
-[User Automation Testing](#user-automation-testing)
+1. [Form Builder](#form-builder)
 
-[Design Systems / Philosophies](#design-systems-/-philosophies)
+1. [User Automation Testing](#user-automation-testing)
 
-[State Management](#state-management)
+1. [Design Systems / Philosophies](#design-systems-/-philosophies)
 
-[Software Documentation](#software-documentation)
+1. [State Management](#state-management)
 
-[ Angular – Component Library]( #angular-component-library)
+1. [Software Documentation](#software-documentation)
+
+1. [ Angular – Component Library]( #angular-component-library)
 
 
 
