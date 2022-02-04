@@ -7,7 +7,7 @@
 
 1. [User Automation Testing](#user-automation-testing)
 
-1. [Design Systems / Philosophies](#design-systems-/-philosophies)
+1. [Design Systems / Philosophies](#design-systems--philosophies)
 
 1. [State Management](#state-management)
 
