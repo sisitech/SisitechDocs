@@ -110,9 +110,9 @@ while wrapping a text around one * makes the text italic.
 
 ```
 
-| Light Color | Current State | Next State
-|:------ | |:------ | |:------ 
-| Green | Yellow | Red
+| Light Color | Current State | Next State |
+|:------ | |:------ | |:------ |
+| Green | Yellow | Red |
 
 ### Creating collapsible content  
 
