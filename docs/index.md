@@ -7,22 +7,22 @@
 
 1. [User Automation Testing](#user-automation-testing)
 
-1. [Design Systems / Philosophies](#design-systems--philosophies)
+1. [Design Systems and Philosophies](#design-systems-philosophies)
 
 1. [State Management](#state-management)
 
 1. [Software Documentation](#software-documentation)
 
-1. [ Angular – Component Library](#angular--component-library)
+1. [ Angular Component Library](#angular-component-library)
 
 
 
-#### Form Builder  :innocent:
+### Form Builder
 
 - Structuring & Packaging for Libraries - Modularized?
 - HTTP Integration structure / Auth interceptors (on Angular)
 - Research whether getx has auth interceptors
-#### User Automation Testing
+### User Automation Testing
 
 - Appium (Research)
    >Appium Server  
@@ -31,12 +31,12 @@
 - WD (Promise)  
 - Web Driver.io  
 - Oxygen HQ
-#### Design Systems / Philosophies
+### Design Systems and Philosophies
 
 - Research on latest Bootstrap Documentation  
 - Ant Design / Material Design Philosophies
  
-#### State Management
+### State Management
 ------
 - Redux  
 - Store  
@@ -71,7 +71,10 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-####  Software Documentation
+### Software Documentation
+
+- Learn more about markdown scripting [here](/docs/markdown.md)
+ <br>
 
 - Documentation as Code Principle
     > Why it was built the way we built it (inline comments)  
@@ -80,7 +83,7 @@ class MyApp extends StatelessWidget {
     Commit procedure guidelines  
     Breaking changes leads to upgrade of major versions
 	
-#### Angular – Component Library
+#### Angular Component Library
    > Angular Ivy  `npm i -g @angular/cli@latestng update`
    
   > Angular Content Projection  
