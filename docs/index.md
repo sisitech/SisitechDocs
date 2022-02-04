@@ -74,16 +74,15 @@ class MyApp extends StatelessWidget {
 ####  Software Documentation
 
 - Documentation as Code Principle
-    > Why it was built the way we built it (inline comments)  
-     >How to use the library (readme)
-      >Markdown scripting (HTML language - research)  
-    Commit procedure guidelines  
-    Breaking changes leads to upgrade of major versions
+  > Why it was built the way we built it (inline comments)  
+  > How to use the library (readme)
+  > Markdown scripting (HTML language - research)  
+  > Commit procedure guidelines  
+  > Breaking changes leads to upgrade of major versions
 	
 #### Angular – Component Library
-   > Angular Ivy  `npm i -g @angular/cli@latestng update`
-   
+  > Angular Ivy  `npm i -g @angular/cli@latestng update`
   > Angular Content Projection  
   > Lifecycle Hooks  
-> Internationalization - Translation
+  > Internationalization - Translation
  
