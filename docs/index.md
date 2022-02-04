@@ -98,3 +98,5 @@ To run the markdown script to a static website, use [MkDocs](https://www.mkdocs.
 mkdocs serve
 
 ```
+
+Getting started with Material for MkDocs [here](https://squidfunk.github.io/mkdocs-material/getting-started/) 
