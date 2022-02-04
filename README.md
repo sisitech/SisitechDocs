@@ -82,6 +82,7 @@ class MyApp extends StatelessWidget {
 	
 #### Angular – Component Library
    > Angular Ivy  `npm i -g @angular/cli@latestng update`
+   
   > Angular Content Projection  
   > Lifecycle Hooks  
 > Internationalization - Translation
