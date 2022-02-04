@@ -13,7 +13,7 @@
 
 1. [Software Documentation](#software-documentation)
 
-1. [ Angular – Component Library]( #angular-component-library)
+1. [ Angular – Component Library](#angular--component-library)
 
 
 
