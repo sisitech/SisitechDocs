@@ -144,6 +144,19 @@ Use HTML details and summary tags to create an accordion. For example
 
 Markdown also supports emojis  and formulas. 
 
+### Using mermaid
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
+
+
+
 ### Research Links
 
 1. [Latex](https://www.latex-project.org/)
