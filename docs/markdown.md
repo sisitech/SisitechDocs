@@ -102,7 +102,7 @@ while wrapping a text around one * makes the text italic.
 
   - Use dashes to symbolize the columns and rows of a table. An example would explain this easier. 
 
-  - To define the text alignment in the tables, define this for every row using a colon followed by dashes. 
+  - To define dividers and text alignment in the tables, define this for every row using a colon followed by dashes. 
   For example - |:------ (left aligned), :------| (right aligned) and |:------| (center aligned)
 
 ```md
@@ -111,7 +111,7 @@ while wrapping a text around one * makes the text italic.
 ```
 
 | Light Color | Current State | Next State |
-|:------ | |:------ | |:------ |
+|:------ | :------ |:------ |
 | Green | Yellow | Red |
 
 ### Creating collapsible content  
