@@ -3,10 +3,15 @@
 
 **Table of Contents:**
 [Form Builder](#form-builder)
+
 [User Automation Testing](#user-automation-testing)
+
 [Design Systems / Philosophies](#design-systems-/-philosophies)
+
 [State Management](#state-management)
+
 [Software Documentation](#software-documentation)
+
 [ Angular – Component Library]( #angular-component-library)
 
 
