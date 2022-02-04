@@ -12,7 +12,7 @@ Markdown files have an extension of .md
 
 ### Markdown Language Syntax
 
-- The “#” symbol indicates the font size of a text element for example a statement like “# readme” is rendered in HTML as a h1 element tag and “## readme” as a h2 element tag and so on and so forth. Below is an example : 
+The “#” symbol indicates the font size of a text element for example a statement like “# readme” is rendered in HTML as a h1 element tag and “## readme” as a h2 element tag and so on and so forth. Below is an example : 
 
 ```md
 
@@ -22,7 +22,7 @@ Markdown files have an extension of .md
 
 `Remember to add a space between the “#” and your text to render the section header elements correctly.`
 
-- Wrapping a text around ** makes the text bold for example  
+Wrapping a text around ** makes the text bold for example  
 
 ```md
 **Table of Contents** 
@@ -33,14 +33,14 @@ while wrapping a text around one * makes the text italic.
 *More Information* 
 ```
 
--	Wrapping text around `` backticks formats the text and makes it stand out. For example :
+Wrapping text around `` backticks formats the text and makes it stand out. For example :
 
 
 `Markdown scripting is great`
 
 ### Working with Code Snippets
 
-- Wrap a text around three backticks to paste a code snippet. 
+Wrap a text around three backticks to paste a code snippet. 
 
 ```js
 
@@ -52,23 +52,25 @@ while wrapping a text around one * makes the text italic.
 
 ```
 
-- Define the language formatting style by declaring the language extension after the three backticks i.e., `py for python`, `js for JavaScript` etc. 
+Define the language formatting style by declaring the language extension after the three backticks i.e., `py for python`, `js for JavaScript` etc. 
 
--	Three dashes (---) adds a horizontal line for natural separation. Also note that h1 tags automatically have an underline beneath the text. For example : 
+Three dashes (---) adds a horizontal line for natural separation. Also note that h1 tags automatically have an underline beneath the text. For example : 
 
 ---
 
 ### Block Quotes
 
--	Use “>” to wrap your text in order to create blockquotes. Here a sample with a Steve Jobs quote.
+Use “>” to wrap your text in order to create blockquotes. Here a sample with a Steve Jobs quote.
 
 >
 “You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.”
+
+-- *Steve Jobs* 
 >
 
 ### Unordered List
 
--	Use a single dash to create an unordered list. For example 
+Use a single dash to create an unordered list. For example 
 
   - Team 1
   - Team 2
@@ -76,35 +78,37 @@ while wrapping a text around one * makes the text italic.
 
 ### Hyperlinking Text
 
-  -	Wrap your h1 and h2 tags around square brackets to make it a hyperlink that scrolls to where the header content section is on the page. Add parentheses after the tag followed by the link-URL i.e. 
+Wrap your h1 and h2 tags around square brackets to make it a hyperlink that scrolls to where the header content section is on the page. Add parentheses after the tag followed by the link-URL i.e. 
 
-  `[General Installation] (#general-installation)`
+`[General Installation] (#general-installation)`
 
 ### Adding Images
 
-  -	To add an image, start the text with an “!” mark. Here is an example:-
+To add an image, start the text with an “!” mark. Here is an example:-
+
 ```md
       [![image name](image path)](image_url)
 ```
 
 [![onekana-logo](./onekana-logo.png)](https://moekedash.request.africa/)
 
-  -	Most HTML tags such as <br> , <p> also work with markdown automatically.
+Most HTML tags such as `<br>` , `<p>` also work with markdown automatically.
 
-  -	[x] and [] are used to display checkboxes (checked and unchecked). For example:-
+[x] and [] are used to display checkboxes (checked and unchecked). For example:-
 
   ```
-    #### Confirm Terms and Conditions
-    [x] No
-    [ ] Yes
+  Confirm Terms and Conditions
+  [x] No
+  [ ] Yes
   ```
 
 ### Creating Tables
 
-  - Use dashes to symbolize the columns and rows of a table. An example would explain this easier. 
+Use dashes to symbolize the columns and rows of a table. An example would explain this easier. 
 
-  - To define dividers and text alignment in the tables, define this for every row using a colon followed by dashes. 
-  For example - |:------ (left aligned), :------| (right aligned) and |:------| (center aligned)
+To define dividers and text alignment in the tables, define this for every row using a colon followed by dashes. 
+
+For example - |:------ (left aligned), :------| (right aligned) and |:------| (center aligned)
 
 ```md
   | Alignment | Script |
@@ -136,7 +140,7 @@ Use HTML details and summary tags to create an accordion. For example
 
 ### Additional Information
 
-- Markdown also supports emojis  and formulas. 
+Markdown also supports emojis  and formulas. 
 
 ### Research Links
 
