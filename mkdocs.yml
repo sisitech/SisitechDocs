@@ -2,9 +2,6 @@ site_name: Sisitech Docs
 
 theme:
   name: material
-  palette:
-    scheme: default
-    primary: teal
   logo: sisitech-logo.png
 
 extra_css:
