@@ -1,5 +1,5 @@
 
-## Markdown Scripting
+### Markdown Scripting
 
 ---
 
@@ -9,7 +9,8 @@
 
 <p> Markdown files have an extension of .md </p>
 
-### Markdown Language Syntax
+
+## Markdown Language Syntax
 
 - The “#” symbol indicates the font size of a text element for example a statement like “# readme” is rendered in HTML as a h1 element tag and “## readme” as a h2 element tag and so on and so forth. Below is an example : 
 
@@ -37,7 +38,7 @@ while wrapping a text around one * makes the text italic.
 
 `Markdown scripting is great`
 
-#### Working with Code Snippets
+### Working with Code Snippets
 
 - Wrap a text around three backticks to paste a code snippet. 
 
@@ -57,7 +58,7 @@ while wrapping a text around one * makes the text italic.
 
 ---
 
-#### Block Quotes
+## Block Quotes
 
 -	Use “>” to wrap your text in order to create blockquotes. Here a sample with a Steve Jobs quote.
 
