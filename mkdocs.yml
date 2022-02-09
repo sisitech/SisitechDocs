@@ -2,41 +2,40 @@ site_name: Sisitech Docs
 
 theme:
   name: material
-  logo: sisitech-logo.png
-  favicon: sisitech-logo.png
-  palette: 
+  logo: ./images/sisitech-logo.png
+  favicon: ./images/sisitech-logo.png
+  palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - scheme: slate 
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-        
+
   features:
     - navigation.top
     - navigation.instant
 
 plugins:
-    - search
-    # - mermaid2
-    
+  - search
+  # - mermaid2
+
 extra_css:
   - css/extra.css
   - https://cdn.jsdelivr.net/gh/knsv/mermaid@6.0.0/dist/mermaid.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
-  
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets 
-  - pymdownx.superfences: 
+  - pymdownx.snippets
+  - pymdownx.superfences:
       custom_fences:
-        - name: mermaid 
+        - name: mermaid
           class: mermaid
-          format:  !!python/name:pymdownx.superfences.fence_div_format
-  
+          format: !!python/name:pymdownx.superfences.fence_div_format
