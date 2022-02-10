@@ -192,11 +192,11 @@ Refer to the table below for the various basic input and output options.
 
 | Option | Is Required | Descripiton | Example |
 |:------ | :------: |:------ |:------|
-| formItems | ✅ | This is used to pass the exported form options from `options.ts`| |
-| formGroupOrder | ✅ | An array within an array used to define the fields to be included and their order | |
-| url | ✖️ | URL path of the API endpoint | `/api/v1/teachers` |
-| extraFields | ✖️ | Any constant fields that are not included in the form and may be required by the API an example would be an access token | `{"token":"Ahw7HD7a"}` |
-| submitButtonText | ✖️ | The text displayed in the form submit button. The default value is `Post` | `Teacher` , `Learner`, `Class` |
+| formItems | ✅ | `@Input` This is used to pass the exported form options from `options.ts`| |
+| formGroupOrder | ✅ | `@Input` An array within an array used to define the fields to be included and their order | |
+| url | ✖️ | `@Input` URL path of the API endpoint | `/api/v1/teachers` |
+| extraFields | ✖️ | `@Input` Any constant fields that are not included in the form and may be required by the API an example would be an access token | `{"token":"Ahw7HD7a"}` |
+| submitButtonText | ✖️ | `@Input` The text displayed in the form submit button. The default value is `Post` | `Teacher` , `Learner`, `Class` |
 | instance | ✖️ | `@Input` - an object provided during update of any previously created instances to trigger edit mode |  |
 | submitButtonPreText | ✖️ | The text displayed in the form submit button before the submit button text (`submitButtonText`). By default the value is `Add`, and if an `instance` is included the value is `Update` | `Add`, `Edit`, `Update`|
 | isValidationOnly | ✖️ | `@Input` - used to validate a form without posting to any URL e.g. in a multi-step form | `true` or `false`|
