@@ -30,6 +30,7 @@ extra_javascript:
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
