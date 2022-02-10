@@ -203,7 +203,7 @@ Refer to the table below for the various basic input and output options.
 | onValidatedData | ✖️ | `@Output` - an event triggered on successful validation with the value of the valid form only if `isValidationOnly` is `true`  | |
 | onPostedData | ✖️ | `@Output` - an event triggered with the value of the HTTP response from the API with successful status codes (`200`, `201`, `204`) | |
 | preSaveDataFunction | ✖️ | `@Input` - a function that accepts and return a JSON used to manipulate the form data after successful validation before `onValidatedData` and `onPostedData`  |  |
-| isLoading | ✖️ | `@Output` - an event triggered with the value `true` when a HTTP request is started and `false` on completion |  |
+| isLoading$ | ✖️ | `@Output` - an event triggered with the value `true` when a HTTP request is started and `false` on completion |  |
 | httpMethod | ✖️ | `@Input` - used to override the HTTP request method. Only `post`, `put` and `patch` are supported | `POST`, `PUT`, `PATCH`  |
 | httpMethod | ✖️ | `@Input` - used to override the HTTP request method. Only `post`, `put` and `patch` are supported | `POST`, `PUT`, `PATCH`  |
 
