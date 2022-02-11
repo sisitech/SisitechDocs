@@ -90,7 +90,7 @@ To add an image, start the text with an “!” mark. Here is an example:-
       [![image name](image path)](image_url)
 ```
 
-[![onekana-logo](./images/onekana-logo.png)](https://moekedash.request.africa/)
+[![onekana-logo](../../images/onekana-logo.png)](https://moekedash.request.africa/)
 
 Most HTML tags such as `<br>` , `<p>` also work with markdown automatically.
 
