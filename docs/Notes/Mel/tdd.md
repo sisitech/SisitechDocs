@@ -208,15 +208,3 @@ describe('My Stack', () => {
 [4]: https://developer.ibm.com/articles/5-steps-of-test-driven-development/
 [5]: https://www.youtube.com/watch?v=Jv2uxzhPFl4
 [6]: https://www.youtube.com/watch?v=Bq_oz7nCNUA
-
-<style>
-    h1{
-        color: #599191;
-    }
-    h2{
-        color: #4c1130;
-    }
-    h3{
-        color: #985735;
-    }
-</style>
