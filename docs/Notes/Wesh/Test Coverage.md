@@ -23,8 +23,8 @@ Code coverage-> unit testing practices that target all areas of your code atleas
 Well, that is what risk coverage means. Identifying risk as per the application/product and testing it thoroughly is always a good practice.
 
 **Requirements Coverage**- checks if the user's requirements are met.For Example:
-***While testing a chat application, tester took care of all the important points like multiple users chatting in a group, two users chatting independently, all types of emoticons available, updates sent to user immediately etc. but forgot to look into requirement document, which clearly mentioned that when two users chat independently, video call option should be enabled. 
-The client marketed the chat application claiming that it would allow calling, while two users chat independently. You can imagine what would have happened to the chat application.***
+
+***While testing a chat application, tester took care of all the important points like multiple users chatting in a group, two users chatting independently, all types of emoticons available, updates sent to user immediately etc. but forgot to look into requirement document, which clearly mentioned that when two users chat independently, video call option should be enabled.The client marketed the chat application claiming that it would allow calling, while two users chat independently. You can imagine what would have happened to the chat application.***
 
 **Boundary Value Coverage**- Suppose you have a feature that can take numbers as input, but it should only accept numbers from 0 to  100, inclusive. In scenarios like these, to ensure the boundaries are properly tested, you’d typically test at the boundary, and immediately below and above the boundary.
 
@@ -65,11 +65,11 @@ The client marketed the chat application claiming that it would allow calling, w
 
 ## References
 
-https://www.guru99.com/test-coverage-in-software-testing.html
-https://www.softwaretestinghelp.com/test-coverage/
-https://www.testim.io/blog/test-coverage-techniques/
+1. https://www.guru99.com/test-coverage-in-software-testing.html
+2. https://www.softwaretestinghelp.com/test-coverage/
+3. https://www.testim.io/blog/test-coverage-techniques/
 
 ### Video References
 
-https://www.youtube.com/watch?v=cMMXvozoXBk
-https://www.youtube.com/watch?v=-MKSYGpxG5g
+- https://www.youtube.com/watch?v=cMMXvozoXBk
+- https://www.youtube.com/watch?v=-MKSYGpxG5g
