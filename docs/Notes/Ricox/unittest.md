@@ -1,4 +1,4 @@
-# SOFTWARE TESTING
+# Software Testing
 
 This is the execution of a software system to assure that it is bug-free.
 

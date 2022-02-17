@@ -124,7 +124,7 @@ export class AddTeacherMyformModule { }
 
 Go to your specific API endpoint and click on the options button to get the options file. 
 
-<img src="../images/click-options.png" width="1000">
+<img src="../../images/click-options.png" width="1000">
 
 Define and export an options object in your options file
 

@@ -4,6 +4,8 @@ theme:
   name: material
   logo: ./images/sisitech-logo.png
   favicon: ./images/sisitech-logo.png
+  font:
+    text: Prompt
   palette:
     - scheme: default
       toggle:

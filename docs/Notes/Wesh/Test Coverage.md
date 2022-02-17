@@ -1,4 +1,4 @@
-# TEST COVERAGE
+# Test Coverage
 
 This is a metric in testing softwares which measures the amount of testing performed by a set of tests. The technique ensures your tests are testing your code . Done by the QA team
 

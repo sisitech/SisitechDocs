@@ -1,8 +1,10 @@
-# Fluent
+# Design Philosophies
+
+## Fluent
 
 Fluent is an open-source, cross-platform design system that gives designers and developers the frameworks they need to create engaging product experiences—accessibility, internationalization, and performance included.
 
-## Fluent for web
+## Fluent for Web
 
 Microsoft's Fluent UI Web Components are designed to help you build Fluent web apps using extensible Web Components. he package composes the @microsoft/fast-foundation Web Component package and styles it with the Fluent design language.
 
@@ -18,7 +20,7 @@ With Fluent UI Web Components you can:
 - Customize, compose and build new Web Components based on the libraries that Fluent UI Web Components is built on, FAST
 - Be part of a dynamic, open-web development community
 
-## Fluent for windows
+## Fluent for Windows
 
 ### WinUI 3
 
