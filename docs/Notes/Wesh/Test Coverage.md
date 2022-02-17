@@ -55,7 +55,7 @@ Well, that is what risk coverage means. Identifying risk as per the application/
 - Most of the tasks in the test coverage manual as there are no tools to automate. Therefore, it takes lots of effort to  analyze the requirements and create test cases.
 - Test coverage allows you to count features and then measure against several tests. However, there is always space for judgment errors.
 
-## Differences between tests coverage and codde coverage
+## Differences between tests coverage and code coverage
 
 | Code coverage                                                                                                                      | Test Coverage                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
