@@ -76,6 +76,17 @@ FluentUI React Native is still in the alpha stages of development for both the c
 
 Bootstrap can be implemented with Angular, flutter
 
+### Bootstrap widgets
+
+#### The angular way
+
+Angular widgets built from the ground up using only Bootstrap 5 CSS with APIs designed for the Angular ecosystem.
+
+The only dependencies are Angular, Bootstrap 5 CSS and Popper
+
+    // Installation for Angular CLI
+    ng add @ng-bootstrap/ng-bootstrap
+
 ## ANT-DESIGN
 
 ### Features
@@ -150,24 +161,22 @@ The last major update was may 2021
 
 ## REFERENCES
 
-- https://github.com/material-components/material-components-web/blob/master/docs/framework-wrappers.md
-- https://material.io/design/introduction
-- https://material.io/design
-- https://ant.design/docs/react/introduce
-- https://ant.design/docs/spec/introduce
-- https://ng-bootstrap.github.io/#/getting-started
-- https://getbootstrap.com/docs/5.1/getting-started/introduction/
-- https://docs.flutter.dev/resources/bootstrap-into-dart
-- https://getbootstrap.com/docs/versions/
-- https://ant.design/changelog
-- https://material.io/whats-new
-- https://www.microsoft.com/design/fluent/#/
-- https://docs.microsoft.com/en-us/fluent-ui/web-components/
-- https://github.com/microsoft/fluentui
-- https://developer.microsoft.com/en-us/fluentui#/get-started/ios
-- https://github.com/microsoft/fluentui-apple/tree/master/ios/FluentUI
-- https://developer.microsoft.com/en-us/fluentui#/get-started/android
-- https://developer.microsoft.com/en-us/fluentui#/get-started/mac
-- https://github.com/microsoft/fluentui-apple/tree/master/macos/FluentUI
-- https://developer.microsoft.com/en-us/fluentui#/get-started/crossplatform
-- https://github.com/microsoft/fluentui-react-native#fluentui-react-native
+- [MDC Web on other frameworks](https://github.com/material-components/material-components-web/blob/master/docs/framework-wrappers.md)
+- [Introduction into material design](https://material.io/design/introduction)
+- [Material design](https://material.io/design)
+- [Ant Design of React](https://ant.design/docs/react/introduce)
+- [Introduction into Ant Design](https://ant.design/docs/spec/introduce)
+- [Bootstrap widgets The angular way](https://ng-bootstrap.github.io/#/home)
+- [Get started with Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- [Bootstrap into Dart](https://docs.flutter.dev/resources/bootstrap-into-dart)
+- [Bootstrap Versioning](https://getbootstrap.com/docs/versions/)
+- [Ant Design Versioning](https://ant.design/changelog)
+- [Material design versioning](https://material.io/whats-new)
+- [Fluent Design System](https://www.microsoft.com/design/fluent/#/)
+- [Fluent for web](https://docs.microsoft.com/en-us/fluent-ui/web-components/)
+- [Fluent UI Web](https://github.com/microsoft/fluentui)
+- [Fluent for iOS](https://developer.microsoft.com/en-us/fluentui#/get-started/ios)
+- [Fluent for Android](https://developer.microsoft.com/en-us/fluentui#/get-started/android)
+- [Fluent for macOS](https://developer.microsoft.com/en-us/fluentui#/get-started/mac)
+- [Fluent for crossplatforms](https://developer.microsoft.com/en-us/fluentui#/get-started/crossplatform)
+- [FluentUI React Native](https://github.com/microsoft/fluentui-react-native#fluentui-react-native)
