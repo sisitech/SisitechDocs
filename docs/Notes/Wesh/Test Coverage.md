@@ -14,6 +14,7 @@ Code coverage-> unit testing practices that target all areas of your code atleas
 ## Test coverage techniques
 
 **Product Coverage**- Looking at test coverage with your product in mind i.e whatareas of the product have you tested? For example:
+
   ***If “knife” is a product, you are testing; just do not concentrate on checking whether it cuts the vegetables/fruits properly. There are other aspects to look for such as – the user should be able to handle it comfortably***
 
 **Risk Coverage**- listing the risks involved in the application and making sure they’re covered by tests. For Example:
@@ -65,11 +66,17 @@ Well, that is what risk coverage means. Identifying risk as per the application/
 
 ## References
 
-1. https://www.guru99.com/test-coverage-in-software-testing.html
-2. https://www.softwaretestinghelp.com/test-coverage/
-3. https://www.testim.io/blog/test-coverage-techniques/
+- [Test Coverage in Software Testing][1]
+- [Test Coverage in Software Testing (Tips to Maximize Testing Coverage)][2]
+- [Test Coverage Techniques: The Top Ones You Need][3]
 
 ### Video References
 
-- https://www.youtube.com/watch?v=cMMXvozoXBk
-- https://www.youtube.com/watch?v=-MKSYGpxG5g
+- [Test Coverage - Software Testing][4]
+- [Test Coverage Metrics – Whiteboard Friday][5]
+
+[1]: https://www.guru99.com/test-coverage-in-software-testing.html
+[2]: https://www.softwaretestinghelp.com/test-coverage/
+[3]: https://www.testim.io/blog/test-coverage-techniques/
+[4]: https://www.youtube.com/watch?v=cMMXvozoXBk
+[5]: https://www.youtube.com/watch?v=-MKSYGpxG5g
