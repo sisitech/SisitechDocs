@@ -1,4 +1,4 @@
-## What are Sisitech Forms
+## Sisitech Forms
 ___
 
 Sisitech Forms is a forms library that provide functionality that allows users to interact with the web page. This way a user can submit data to a server for processing. Our form architecture sits in between the front-end (user-facing) side and the backend while handling front-end and server side validation as well as HTTP requests.  
