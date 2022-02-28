@@ -1,4 +1,4 @@
-# Design Philosophies
+# UI Design Philosophies
 
 ## Fluent
 
