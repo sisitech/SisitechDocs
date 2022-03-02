@@ -1,4 +1,4 @@
-## What are Sisitech Forms
+## Sisitech Forms
 ___
 
 Sisitech Forms is a forms library that provide functionality that allows users to interact with the web page. This way a user can submit data to a server for processing. Our form architecture sits in between the front-end (user-facing) side and the backend while handling front-end and server side validation as well as HTTP requests.  
@@ -11,7 +11,7 @@ Sisitech Forms is a forms library that provide functionality that allows users t
 
 - Copy the myform package into your project's **shared** folder. 
 
-<img src="../images/shared.png" width="600">
+<img src="../../images/shared.png" width="600">
 
 
 ### Configuration
@@ -117,14 +117,14 @@ export class AddTeacherMyformModule { }
 
 - Create an options.ts file 
 
-<img src="../images/options.png" width="600">
+<img src="../../images/options.png" width="600">
 
 #### Server Side Integration
 
 
 Go to your specific API endpoint and click on the options button to get the options file. 
 
-<img src="../images/click-options.png" width="1000">
+<img src="../../images/click-options.png" width="1000">
 
 Define and export an options object in your options file
 
@@ -220,6 +220,7 @@ An array within an array used to define the fields to be included and the order 
   ]
 
 ```
+Note: Make sure your array within an arrat **formGroupOrder** is seperated with commas. 
 
 The options `first_name`, `middle_name` etc are the keys names for the `POST` object in the `options.ts`
 
@@ -374,4 +375,4 @@ export class AddTeacherMyformComponent implements OnInit {
 
 Test your forms to confirm it's working well. 
 
-<img src="../images/form.png" width="500">
+<img src="../../images/form.png" width="500">
