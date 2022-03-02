@@ -376,3 +376,23 @@ From the Angular root folder, run
 
 
 
+## EXAMPLE
+
+Create a new schematic
+
+```bash 
+schematics blank --name=add-doc
+```
+<hr>
+
+## Resources
+
+1. [Youtube Video](https://www.youtube.com/watch?v=M5YSPas3qFo&t=261s&ab_channel=AngularMeetupZurich)
+
+1. [Introduction](https://indepth.dev/posts/1323/angular-schematics-from-0-to-publishing-your-own-library-i)
+
+1. [Schematics File System API](https://indepth.dev/posts/1329/angular-schematics-from-0-to-publishing-your-own-library-ii)
+
+1. [Schematics Example](https://indepth.dev/posts/1342/angular-schematics-from-0-to-publishing-your-own-library-iii)
+
+
