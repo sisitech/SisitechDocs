@@ -1,4 +1,4 @@
-# Design Structure
+# Design Specification Format
 
 ## **About**
 
@@ -59,21 +59,24 @@ Outlines the colour pallate of the application and the reasoning behind choosing
 2. **Dark and light primary variants** : The primary color can be used to make a color theme for an app by including dark and light primary color variants. These variants are used to create contrast between UI elements, such as a top app bar from a system bar.
 3. **Secondary color** : A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of the UI. If there's no secondary color, the primary color can also be used to accent elements. Secondary colors are best for:
 
-- Floating action buttons
-- Selection controls, like sliders and switches
-- Highlighting selected text
-- Progress bars
-- Links and headlines
+   - Floating action buttons
+   - Selection controls, like sliders and switches
+   - Highlighting selected text
+   - Progress bars
+   - Links and headlines
 
 4. **Dark and light secondary variants** : Just like the primary color, the secondary color can have dark and light variants. A color theme can use the primary color, secondary color, and dark and light variants of each color.
 5. **Surface colors** : Affect surfaces of components, such as cards, sheets, and menus.
 6. **Background color** : Appears behind scrollable content.
 7. **Error color** : Indicates errors in components, such as invalid text in a text field.
 
-> **Note** : *Surface, background, and error colors typically don’t represent brand.*
 
-8. **On colors** : Referr to the fact that they color elements that appear “on” top of surfaces that use the following colors: a primary color, secondary color, surface color, background color, or error color. “On” colors are primarily applied to text, iconography, and strokes. Sometimes, they are applied to surfaces.
-9. **Alternative colors** : These are colors used as alternatives to the brand’s primary and secondary colors (they constitute additional colors to the theme). Alternative colors should be used cautiously, because they can be challenging to implement cohesively with existing color themes. They are best for:
+!!! note 
+        Surface, background, and error colors typically don’t represent brand.
+
+
+1. **On colors** : Referr to the fact that they color elements that appear “on” top of surfaces that use the following colors: a primary color, secondary color, surface color, background color, or error color. “On” colors are primarily applied to text, iconography, and strokes. Sometimes, they are applied to surfaces.
+2. **Alternative colors** : These are colors used as alternatives to the brand’s primary and secondary colors (they constitute additional colors to the theme). Alternative colors should be used cautiously, because they can be challenging to implement cohesively with existing color themes. They are best for:
 
 - Apps with light and dark themes
 - Apps with different themes in different sections
