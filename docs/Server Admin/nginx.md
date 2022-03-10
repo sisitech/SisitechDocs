@@ -6,9 +6,11 @@
 sudo apt-get update
 sudo apt-get install nginx
 ```
-
 ----
 ## Configuring Django Rest API
+
+
+
 
 -  Create an api config file inside 
 ```

@@ -5,7 +5,7 @@ theme:
   custom_dir: sisitech-material 
   logo: ./images/sisitech-logo.png
   favicon: ./images/sisitech-logo.png
-  font:
+  font: 
     text: Prompt
   palette:
     - scheme: default
@@ -56,7 +56,7 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets 
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.superfences:
