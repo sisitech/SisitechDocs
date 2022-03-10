@@ -172,8 +172,8 @@ sequenceDiagram
   Bob-->>John: Jolly good!
 ```
 
-
-Checkbox
+<hr>
+## Checkbox
 ```
 - [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
 - [ ] Vestibulum convallis sit amet nisi a tincidunt
