@@ -2,6 +2,7 @@ site_name: Sisitech Docs
 
 theme:
   name: material
+  custom_dir: sisitech-material 
   logo: ./images/sisitech-logo.png
   favicon: ./images/sisitech-logo.png
   font:
@@ -21,7 +22,7 @@ theme:
     - navigation.instant
 
 plugins:
-  - search
+  - search 
   # - mermaid2
 
 extra:
