@@ -11,6 +11,10 @@
   white-space: pre;
   color: grey;
   @bottom-center {
-      content: 'Page ' counter(page);
+    content: "Page " counter(page);
   }
+}
+
+.gsc-main {
+  font-size: 4px;
 }
