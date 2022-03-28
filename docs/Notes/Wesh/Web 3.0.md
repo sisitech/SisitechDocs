@@ -1,6 +1,6 @@
 # Web 3.0
 
-## What is web 3.0
+## What is web 3.0?
 
 This is the 3rd generation of internet services for websites and applications that will focus on using a machine-based understanding of data to provide a data-driven and Semantic Web and is the founding block of cryptocurrency and blockchain. The main goals of  web 3.0 is to be autonomous, and intelligent.
 Data in web 3.0 is to be interconnected in a decentralized way.
