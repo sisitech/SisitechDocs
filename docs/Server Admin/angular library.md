@@ -1,5 +1,5 @@
 
-# Setting Up angular Libraries
+# Setting Up Angular Libraries
 
 ### Generate a blank Angular workspace
 ```
@@ -150,6 +150,41 @@ Building and packaging the libary generates a `sisitech-myform-0.0.1.tgz` packag
 npm run myform:build
 npm run myform:pack
 
+```
+## Including Assets / Styles when Building the Library
+
+Add `"assets": ["./styles/*.*","./assets/*.*"]` into the `ng-package.json` file of the library.
+
+``` json title="ng-package.json" linenums="1" hl_lines="7 8 9 10"
+
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/footer",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": [
+    "./styles/*.*",
+    "./assets/*.*"
+  ]
+}
+
+```
+
+## Using Assets, Javascript & styles Within Your Project
+
+Add the code below to your `angular.json` file
+
+``` json title="angular.json"
+  "assets": [ 
+    "projects/example/src/assets"
+    ],
+  "styles": [ 
+    "projects/example/src/styles.scss"
+    ],
+  "scripts": [
+    "projects/example/src/my-js-file.js"
+    ]
 ```
 
 ## Resources
