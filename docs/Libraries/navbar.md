@@ -47,7 +47,7 @@ The library can be consumed as a whole with preselected components and in an alr
 
 The output would be as shown below :
 
-[!lib-mynavbar](../images/lib-navbar.png)
+[![lib-mynavbar](../images/lib-navbar.png)]
 
 The library could also be consumed in bits, choosing a few compoenents and in whichever order the developer desires as shown :
 
