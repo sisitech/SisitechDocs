@@ -62,3 +62,7 @@ The best approach to choose will depend on company structure, internal resources
 - [A/B testing](https://www.optimizely.com/optimization-glossary/ab-testing/)
 - [What is A/B testing?](https://www.kameleoon.com/en/ab-testing)
 - [Guide to A/B testing](https://www.abtasty.com/ab-testing/)
+
+## Video references
+- [A/B Testing With Webflow](https://www.youtube.com/watch?v=22AhnC2HtRg)
+- [How to create A/B Test? (Server-side Testing)](https://www.youtube.com/watch?v=Zu31h3vsQa8)
