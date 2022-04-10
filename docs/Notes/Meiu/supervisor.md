@@ -48,3 +48,18 @@ supervisord -c ~/supervisor.conf
 ```
 supervisorctl -c ~/supervisor.conf
 ```
+
+## Restarting
+
+```
+supervisorctl -c ~/supervisor.conf
+
+restart myapp
+```
+
+## Automating restart
+
+```
+supervisorctl  -c supervisor.conf <<EOF restart myapp
+EOF
+```
