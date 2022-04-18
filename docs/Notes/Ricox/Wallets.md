@@ -98,9 +98,9 @@ These wallets are cold wallets.
 - Atomic [Atomic](https://atomicwallet.io/)
 - Exodus [Exodus](https://www.exodus.com/)
 - Guarda wallet [Guarda](https://guarda.com/)
-Jaxx [Jaxx](https://jaxx.io/)
+- Jaxx [Jaxx](https://jaxx.io/)
 - Electrum [Electrum](https://electrum.org/#home)
-- Bitcoin Armory[armory](https://www.bitcoinarmory.com/)
+- Bitcoin Armory [armory](https://www.bitcoinarmory.com/)
 
 ## Custodial Wallets
 
