@@ -58,8 +58,8 @@ When one owns a car, they are given a title. This title is a token. When you sel
 
 They are created by businesses. They give the owner the right to use that company’s product or service in the future.
 
-This makes utility tokens a store of value. They function like digital coins with restricted functionality. 
-They are consumer or incentive tokens which are sold as part of a fund development and can be used as part of a network or project e.g. loyalty programs. 
+This makes utility tokens a store of value. They function like digital coins with restricted functionality.
+They are consumer or incentive tokens which are sold as part of a fund development and can be used as part of a network or project e.g. loyalty programs.
 
 ### Security Tokens
 
@@ -68,7 +68,6 @@ Security tokens represent a tradable investment or asset. The shares of a compan
 As investments, tokens are regulated by government agencies. In theory, this makes their owners less vulnerable to hacking and fraud. Ownership of a security token is verified through a record of its existence on a blockchain.
 
 ![utility vs security tokens](https://cdn.shortpixel.ai/spai/w_780+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2018/09/security_vs_utility_token.jpg)
-
 
 ### Differences
 
@@ -84,10 +83,19 @@ Simply put, a token represents what you own, while a coin denotes what you're ca
 ## REFERENCES
 
 <https://www.ndtv.com/business/crypto-assets-whats-the-difference-between-coins-and-tokens-2714817>
+
 <https://blog.liquid.com/coin-vs-token>
+
 <https://www.investopedia.com/terms/c/crypto-token.asp>
+
 <https://www.bitdegree.org/crypto/tutorials/token-vs-coin>
+
 <https://developers.rsk.co/guides/get-crypto-on-rsk/cryptocurrency-vs-token/>
+
 <https://www.analyticsinsight.net/exploring-the-difference-between-crypto-coins-and-crypto-tokens/>
+
 <https://www.coinbase.com/learn/crypto-basics/what-is-a-token>
+
 <https://cryptopotato.com/security-vs-utility-tokens-the-complete-guide/>
+
+<https://www.gobankingrates.com/investing/crypto/cypto-coin-vs-token/>
