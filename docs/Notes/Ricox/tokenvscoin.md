@@ -29,7 +29,61 @@ A coin is defined by the following characteristics:
 
 [CoinList](https://coinmarketcap.com/coins/views/all/)
 
-### Examples of coins
+### Examples of Cryptocurrency coins
+
+### ALTCOINS
+
+An Altcoin is an alternative digital currency to Bitcoin. It actually refers to a group of cryptocurrencies, ultimately all the cryptocurrencies other than Bitcoin.
+
+Altcoins work on the same core principles as bitcoins.
+They differ from bitcoin in their mining process called proof of stake where the mining power of an investor is directly proportional to the number of coins they have.
+They experience a spike in their values.(volatile)
+
+### Examples of Altcoins
+
+- Ethereum (ETH)
+- Solana (SOL)
+- Litecoin (LTC)
+- Lisk (LSK)
+- Monacoin (MONA)
+- Stellar Lumens (XLM)
+- Basic Attention Token (BAT)
+- Tezos (XTZ)
+- Polkadot (DOT)
+
+### STABLECOINS
+
+Stablecoins are digital representations of fiat currencies whose price is tethered to a cryptocurrency or fiat money or for trading commodities like valuable metals.
+THey are not that prone to experience a spike in their values.
+[stablecoins](https://medium.com/hyperquant/explaining-stable-coins-9a360a8448e)
+They fall into three groups:
+
+- *Fiat-collateralized*: The crypto-currency is backed by fiat currency. Examples are Tether (USDT) and the Gemini Dollar (GUSD).
+[real asset backed](https://medium.com/hyperquant/real-asset-backed-stablecoins-4c002ffa2bc8)
+
+- *Crypto-collateralized*: The crypto-currency is backed by a crypto-currency. An example is DAI.
+[crypto-collateralized](https://medium.com/hyperquant/crypto-collateralized-stablecoins-129df769b089)
+
+- *Non-collateralized* stablecoins rely on a smart contract to buy/sell the stablecoin in order to keep the price constant.These type of stablecoins do not need collateral, and their value is regulated by the supply.
+[non-collateralized](https://medium.com/hyperquant/non-collaterized-stablecoins-efc904b5e06a)
+
+## NOTE
+
+Several stablecoins are actually not coins, but tokens.
+
+Two examples of stablecoins are:
+
+- [TerraUSD](https://coinmarketcap.com/de/currencies/terrausd/)
+
+- [Steem Dollars](https://coinmarketcap.com/de/currencies/steem-dollars/)
+
+Two examples for “stable tokens” are:
+
+- [Tether](https://coinmarketcap.com/de/currencies/tether/)
+
+- [USD Coin](https://coinmarketcap.com/de/currencies/usd-coin/)
+
+Both are ERC20 tokens on the Ethereum blockchain.
 
 ![crypto coins](https://static.vecteezy.com/system/resources/thumbnails/000/211/204/original/golden-cryptocurrency-coin-icons-set.jpg)
 
@@ -69,6 +123,15 @@ As investments, tokens are regulated by government agencies. In theory, this mak
 
 ![utility vs security tokens](https://cdn.shortpixel.ai/spai/w_780+q_lossless+ret_img+to_webp/https://cryptopotato.com/wp-content/uploads/2018/09/security_vs_utility_token.jpg)
 
+### Non-Fungible Tokens(NFT)
+
+NFTs are unique cryptographic tokens that exist on a blockchain and cannot be replicated.
+NFTs can represent real-world items like artwork and real estate.
+NFTs can also function to represent individuals' identities, property rights, and more.
+
+NFTs evolved from the ERC-721 standard. Developed by some of the same people responsible for the ERC-20 smart contract, ERC-721 defines the minimum interface—ownership details, security, and metadata—required for the exchange and distribution of gaming tokens.
+ The ERC-1155 standard takes the concept further by reducing the transaction and storage costs required for NFTs and batching multiple types of non-fungible tokens into a single contract.
+
 ### Differences
 
 The difference between tokens and coins is what they represent. While crypto coins are essentially digital versions of money, tokens can stand for assets or deeds.
@@ -99,3 +162,9 @@ Simply put, a token represents what you own, while a coin denotes what you're ca
 <https://cryptopotato.com/security-vs-utility-tokens-the-complete-guide/>
 
 <https://www.gobankingrates.com/investing/crypto/cypto-coin-vs-token/>
+
+<https://askanydifference.com/difference-between-stablecoins-and-altcoins/>
+
+<https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq>
+
+<https://www.investopedia.com/non-fungible-tokens-nft-5115211>
