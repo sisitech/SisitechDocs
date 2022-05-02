@@ -1,23 +1,25 @@
-## Ubuntu 20.04
+# Ubuntu 20.04
 
-### Installing
+## Installing
 
-```
+``` bash
 sudo apt-get update
 sudo apt-get install nginx
 ```
+
 ----
+
 ## Configuring Django Rest API
 
+- Create an api config file inside
 
+``` bash
 
-
--  Create an api config file inside 
-```
 cd /etc/nginx/sites-available
 nano sampeApi
 ```
- - Paste the following sample and replace the higlighted lines
+
+- Paste the following sample and replace the higlighted lines
 
 ``` config linenums="1" hl_lines="2 7 8 12 17" title="sampleApi"
 server {
@@ -68,15 +70,13 @@ server {
 }
 ```
 
-
-
 ## Configuring letsEncrypt SSL
 
 Refer to [Setting Up Letsencrypt](../letsencrypt) on installing and requesting for a certificate using letsencrypt
 
-
 If you do not have an ssl, uncomment `#listen 80;` and comment `listen 443 ssl;` statements together with the certifcate paths as shown belows
-``` linenums="5" title="sampleApi" 
+
+``` linenums="5" title="sampleApi"
 listen 80;
 #listen 443 ssl;
 #ssl_certificate /etc/letsencrypt/live/api.pl-emis.com/fullchain.pem; # managed by Certbot
@@ -84,7 +84,9 @@ listen 80;
 ```
 
 ## Redirect http -> https
+
 Add the following lines and replace the server_name
+
 ``` linenums="1" hl_lines="4"
 server {
     listen 80 ;
@@ -95,8 +97,8 @@ server {
 }
 ```
 
-
 ## Enable API Config
+
 - Create a symbolic link of the config in the `sites-enabled` folder
 
 ```
@@ -104,18 +106,19 @@ sudo ln -s /full/path/sites-available/sampleApi /full/path/sites-enabled/sampleA
 ```
 
 !!! caution
-    It must be the absolute path not a relative path 
-
-
+    It must be the absolute path not a relative path
 
 ----
+
 ## Configuring Static Dashboard
 
--  Create an api config file inside 
+- Create an api config file inside
+
 ```
 cd /etc/nginx/sites-available
 nano sampeDash
 ```
+
 - Paste the following sample and replace the higlighted lines
 
 ``` sh title="sampeDash" linenums="1" hl_lines="3 5 6 19"
@@ -144,17 +147,18 @@ server {
 
 ```
 
-
-
 ---
+
 ## Testing & Restart
 
 - Test nginx config
+
 ```
 sudo nginx -t
 ```
 
 - Restart nginx
+
 ```
 sudo systemctl restart nginx
 ```
