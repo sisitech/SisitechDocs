@@ -9,10 +9,9 @@ It Provides a means that converts to HTML and renders to the page. However, mark
 
 Markdown files have an extension of .md
 
-
 ### Markdown Language Syntax
 
-The “#” symbol indicates the font size of a text element for example a statement like “# readme” is rendered in HTML as a h1 element tag and “## readme” as a h2 element tag and so on and so forth. Below is an example : 
+The “#” symbol indicates the font size of a text element for example a statement like “# readme” is rendered in HTML as a h1 element tag and “## readme” as a h2 element tag and so on and so forth. Below is an example :
 
 ```md
 
@@ -27,7 +26,8 @@ Wrapping a text around ** makes the text bold for example
 ```md
 **Table of Contents** 
 ```
-while wrapping a text around one * makes the text italic. 
+
+while wrapping a text around one * makes the text italic.
 
 ```md
 *More Information* 
@@ -35,12 +35,11 @@ while wrapping a text around one * makes the text italic.
 
 Wrapping text around `` backticks formats the text and makes it stand out. For example :
 
-
 `Markdown scripting is great`
 
 ### Working with Code Snippets
 
-Wrap a text around three backticks to paste a code snippet. 
+Wrap a text around three backticks to paste a code snippet.
 
 ```js
 
@@ -52,9 +51,9 @@ Wrap a text around three backticks to paste a code snippet.
 
 ```
 
-Define the language formatting style by declaring the language extension after the three backticks i.e., `py for python`, `js for JavaScript` etc. 
+Define the language formatting style by declaring the language extension after the three backticks i.e., `py for python`, `js for JavaScript` etc.
 
-Three dashes (---) adds a horizontal line for natural separation. Also note that h1 tags automatically have an underline beneath the text. For example : 
+Three dashes (---) adds a horizontal line for natural separation. Also note that h1 tags automatically have an underline beneath the text. For example :
 
 ---
 
@@ -65,20 +64,20 @@ Use “>” to wrap your text in order to create blockquotes. Here a sample with
 >
 “You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.”
 
--- *Steve Jobs* 
+-- *Steve Jobs*
 >
 
 ### Unordered List
 
-Use a single dash to create an unordered list. For example 
+Use a single dash to create an unordered list. For example
 
-  - Team 1
-  - Team 2
-  - etc
+- Team 1
+- Team 2
+- etc
 
 ### Hyperlinking Text
 
-Wrap your h1 and h2 tags around square brackets to make it a hyperlink that scrolls to where the header content section is on the page. Add parentheses after the tag followed by the link-URL i.e. 
+Wrap your h1 and h2 tags around square brackets to make it a hyperlink that scrolls to where the header content section is on the page. Add parentheses after the tag followed by the link-URL i.e.
 
 `[General Installation] (#general-installation)`
 
@@ -104,9 +103,9 @@ Most HTML tags such as `<br>` , `<p>` also work with markdown automatically.
 
 ### Creating Tables
 
-Use dashes to symbolize the columns and rows of a table. An example would explain this easier. 
+Use dashes to symbolize the columns and rows of a table. An example would explain this easier.
 
-To define dividers and text alignment in the tables, define this for every row using a colon followed by dashes. 
+To define dividers and text alignment in the tables, define this for every row using a colon followed by dashes.
 
 For example - |:------ (left aligned), :------| (right aligned) and |:------| (center aligned)
 
@@ -123,26 +122,25 @@ For example - |:------ (left aligned), :------| (right aligned) and |:------| (c
 
 ### Creating collapsible content  
 
-Use HTML details and summary tags to create an accordion. For example 
+Use HTML details and summary tags to create an accordion. For example
 
 ```md
 
 <details>
-	<summary> Section Header </summary>
+ <summary> Section Header </summary>
     Section Body Text. More information here
 </details>
 
 ```
 
 <details>
-	<summary> Section Header </summary>
-    Section Body Text. More information here. 
+ <summary> Section Header </summary>
+    Section Body Text. More information here.
 </details>
-
 
 ### Additional Information
 
-Markdown also supports emojis  and formulas. 
+Markdown also supports emojis  and formulas.
 
 ### Using mermaid
 
@@ -158,7 +156,8 @@ Markdown also supports emojis  and formulas.
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
   ```
-``` 
+
+```
 
 ``` mermaid
 sequenceDiagram
@@ -177,7 +176,7 @@ sequenceDiagram
 ```
 - [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
 - [ ] Vestibulum convallis sit amet nisi a tincidunt
-    * [x] In hac habitasse platea dictumst
+    *[x] In hac habitasse platea dictumst
     * [x] In scelerisque nibh non dolor mollis congue sed et metus
     * [ ] Praesent sed risus massa
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
@@ -192,6 +191,14 @@ sequenceDiagram
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
 
+## Warning, Notes
+
+!!! caution
+    It must be the absolute path not a relative path
+
+
+!!! note
+    It must be the absolute path not a relative path
 
 
 
