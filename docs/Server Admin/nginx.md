@@ -1,4 +1,4 @@
-# Ubuntu 20.04
+# Nginx  Ubuntu 20.04
 
 ## Installing
 

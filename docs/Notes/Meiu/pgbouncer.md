@@ -14,7 +14,7 @@ PgBouncer relies on a main configuration file, typically stored as `/etc/pgbounc
 
 ## Configuration
 
-``` title="pgbouncer.ini" line
+```ini title="pgbouncer.ini"
 [databases]
 db1 = host=localhost dbname=db1
 
