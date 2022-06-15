@@ -1,6 +1,6 @@
-# Sisitech Angular Library
+# Sisitech Carousel Library
 
-Sisitech Carousel is an angular library to easily create and control slideshows for different html components.
+[Sisitech Carousel](https://github.com/sisitech/sisitech-carousel) is an angular library to easily create and control slideshows for different html components.
 
 ![lib-carousel](../images/multi-cmp-car.png)
 
@@ -30,13 +30,13 @@ The sisitech carousel library has the following properties :
 
 | Input | Description|
 | :----------- |:----------- |
-| [sliderOptions] | Takes an array of items that each slide will have. It's necessary to prepare the different components for the data given by the sliderItems array.  |
-| [sliderItems] | <p>Takes an array of slide items</p><p>The array takes the following items :</p><ol><li>id: number - used to uniquely identify each slide</li><li>link: string -the target page for when the slide is clicked</li><li>img: string - the header image of the slide</li><li>alt: string - the alternative text in case the image isn't rendered</li><li>title: string - the slider title text</li><li>desc: string - the slider description text</li><li>class: string - the class that can be used to uniquely style the different parts of each slide</li><li>linktxt: string - the text that describes the call to action for each slide</li></ol> |
-| [slidesToShow] | Takes a number and determines the number of slides that will be in view. <br> The default value is 3. |
-| [autoSlide] | Takes a bolean value and makes the slides move automatically. <br> The default value is false.|
-| [controls] | Takes a bolean value and toggles between shwoing and hiding the previous and next buttons <br> The default value is true. |
-| [indicators] | Takes a bolean value and toggles between shwoing and hiding the indicator dots <br> The default value is true. |
-| [slideInterval] | Takes a number and determines the speed at which the slides move on autoSlide <br> The default value is 4000 (4s).  |
+| **[sliderOptions]** | Takes an array of items that each slide will have. It's necessary to prepare the different components for the data given by the sliderItems array.  |
+| **[sliderItems]** | <p>Takes an array of slide items</p><p>The array takes the following items :</p><ol><li>id: string - used to uniquely identify each slide</li><li>link: string -the target page for when the slide is clicked</li><li>img: string - the header image of the slide</li><li>alt: string - the alternative text in case the image isn't rendered</li><li>title: string - the slider title text</li><li>desc: string - the slider description text</li><li>class: string - the class that can be used to uniquely style the different parts of each slide</li><li>linktxt: string - the text that describes the call to action for each slide</li></ol> |
+| **[slidesToShow]** | Takes a number and determines the number of slides that will be in view. <br> The default value is 3. |
+| **[autoSlide]** | Takes a bolean value and makes the slides move automatically. <br> The default value is false.|
+| **[controls]** | Takes a bolean value and toggles between shwoing and hiding the previous and next buttons <br> The default value is true. |
+| **[indicators]** | Takes a bolean value and toggles between shwoing and hiding the indicator dots <br> The default value is true. |
+| **[slideInterval]** | Takes a number and determines the speed at which the slides move on autoSlide <br> The default value is 4000 (4s).  |
 
 !!! note
     The inputs [sliderItems] and [sliderOptions] are compulsory inputs.
@@ -63,49 +63,49 @@ The library can be used to create a slideshow for single components, e.g. images
 
   partnersCarousel: any = [
     {
-      id: 0,
+      id: '0',
       link: "https://www.unicef.org/kenya/",
       img: "../../assets/chuo-carousel/unicef.svg",
       alt: "unicef",
       class: "unicef"
     },
     {
-      id: 1,
+      id: '1',
       link: "https://www.wvi.org/somalia",
       img: "../../assets/chuo-carousel/world-vision-01.svg",
       alt: "world vision somalia",
       class: "world-vision"
     },
     {
-      id: 2,
+      id: '2',
       link: "https://kenya.savethechildren.net/",
       img: "../../assets/chuo-carousel/save-the-children-02.svg",
       alt: "save the children",
       class: "save-the-children"
     },
     {
-      id: 3,
+      id: '3',
       link: "https://naconek.ke/",
       img: "../../assets/chuo-carousel/naconek-03.svg",
       alt: "naconeck",
       class: "naconek"
     },
     {
-      id: 4,
+      id: '4',
       link: "https://www.responseinnovationlab.com/somalia",
       img: "../../assets/chuo-carousel/somril-04.svg",
       alt: "response innovation lab somalia",
       class: "ril"
     },
     {
-      id: 5,
+      id: '5',
       link: "https://en.wikipedia.org/wiki/Puntland",
       img: "../../assets/chuo-carousel/puntland.png",
       alt: "puntland state",
       class: "puntland"
     },
     {
-      id: 6,
+      id: '6',
       link: "https://www.education.go.ke/",
       img: "../../assets/chuo-carousel/moe.jpeg",
       alt: "ministry of education",
@@ -159,7 +159,7 @@ wavvyOptions = ['id', 'img', 'alt', 'title', 'desc', 'link', 'class', 'linktxt']
 
  wavvyCarousel = [
     {
-      id: 1,
+      id: '1',
       img: '../../assets/wavvy-carousel/weche-cover.png',
       alt: 'weche',
       desc: "Kenyan record label Gondwana KE is ever feeding our musical atmosphere with profound and authentic African style music",
@@ -169,7 +169,7 @@ wavvyOptions = ['id', 'img', 'alt', 'title', 'desc', 'link', 'class', 'linktxt']
       linktxt: 'WATCH VIDEO'
     },
     {
-      id: 2,
+      id: '2',
       img: '../../assets/wavvy-carousel/hutia-cover.png',
       alt: 'hutia',
       desc: "Rising Deejays Ally Fresh & Mura drop their hit single & music video Hutia. An afrocentric laid back single perfect for setting vibrations.",
@@ -179,7 +179,7 @@ wavvyOptions = ['id', 'img', 'alt', 'title', 'desc', 'link', 'class', 'linktxt']
       linktxt: 'WATCH VIDEO'
     },
     {
-      id: 3,
+      id: '3',
       img: '../../assets/wavvy-carousel/hutia-remix-cover.png',
       alt: 'hutia remix',
       desc: "Ally Fresh & DJ Mura K.E thank their fans for 8,000 views in two months. A fresh remix EP just released on Wavvy exclusively",
@@ -189,7 +189,7 @@ wavvyOptions = ['id', 'img', 'alt', 'title', 'desc', 'link', 'class', 'linktxt']
       linktxt: 'WATCH VIDEO'
     },
     {
-      id: 4,
+      id: '4',
       img: '../../assets/wavvy-carousel/weche-cover.png',
       alt: 'weche',
       desc: "Kenyan record label Gondwana KE is ever feeding our musical atmosphere with profound and authentic African style music",
@@ -199,7 +199,7 @@ wavvyOptions = ['id', 'img', 'alt', 'title', 'desc', 'link', 'class', 'linktxt']
       linktxt: 'WATCH VIDEO'
     },
     {
-      id: 5,
+      id: '5',
       img: '../../assets/wavvy-carousel/hutia-cover.png',
       alt: 'hutia',
       desc: "Rising Deejays Ally Fresh & Mura drop their hit single & music video Hutia. An afrocentric laid back single perfect for setting vibrations.",
@@ -209,7 +209,7 @@ wavvyOptions = ['id', 'img', 'alt', 'title', 'desc', 'link', 'class', 'linktxt']
       linktxt: 'WATCH VIDEO'
     },
     {
-      id: 6,
+      id: '6',
       img: '../../assets/wavvy-carousel/hutia-remix-cover.png',
       alt: 'hutia remix',
       desc: "Ally Fresh & DJ Mura K.E thank their fans for 8,000 views in two months. A fresh remix EP just released on Wavvy exclusively",
