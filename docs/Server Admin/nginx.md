@@ -21,7 +21,12 @@ nano sampeApi
 
 - Paste the following sample and replace the higlighted lines
 
-``` config linenums="1" hl_lines="2 7 8 12 17" title="sampleApi"
+``` config linenums="1" hl_lines="7 12 13 17 22" title="sampleApi"
+map $http_upgrade $connection_upgrade {
+        default upgrade;
+        '' close;
+    }
+
 server {
     server_name api.pl-emis.com;
 
@@ -97,6 +102,28 @@ server {
 }
 ```
 
+## Configuring A static angular App
+
+server {
+        listen 80;
+        listen 443 ssl;
+        ssl_certificate /etc/letsencrypt/live/onekana.naconek.ke/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/onekana.naconek.ke/privkey.pem; # managed by Certbot
+
+        include /etc/nginx/mime.types;
+        server_name onekana.naconek.ke;
+        root /home/daa/apps/dash;
+        location / {
+                try_files $uri$args $uri$args/ /index.html;
+        }
+        location ~ \.css {
+                add_header  Content-Type    text/css;
+        }
+        location ~ \.js {
+                add_header  Content-Type    application/x-javascript;
+        }
+}
+
 ## Enable API Config
 
 - Create a symbolic link of the config in the `sites-enabled` folder
@@ -122,6 +149,8 @@ nano sampeDash
 - Paste the following sample and replace the higlighted lines
 
 ``` sh title="sampeDash" linenums="1" hl_lines="3 5 6 19"
+
+
    server {
         #listen 80;
         server_name onekana.naconek.ke;
@@ -148,6 +177,64 @@ server {
 ```
 
 ---
+
+## Websockets
+
+Make sure the highlighted sections are not commented.
+
+```ini linenums="1" hl_lines="1 2 3 4 39 40" title="sampleApi"
+map $http_upgrade $connection_upgrade {
+        default upgrade;
+        '' close;
+    }
+
+server {
+    server_name api.pl-emis.com;
+
+    client_max_body_size 75M;   # adjust to taste
+    #listen 80;
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/api.pl-emis.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/api.pl-emis.com/privkey.pem; # managed by Certbot
+    # Django media
+
+    location /media  {
+        alias /home/azureuser/apps/api/media;
+    }
+
+
+    location /static {
+        alias  /home/azureuser/apps/api/static;
+    }
+
+ 
+    location / {
+        #include proxy_params;
+        proxy_pass http://127.0.0.1:8000;
+
+        proxy_read_timeout 10m;
+        proxy_connect_timeout 10m;
+        proxy_send_timeout 10m;
+        #proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        #proxy_set_header Host $host;  # pass the host header - http://wiki.nginx.org/HttpProxyModule#proxy_pass
+
+        proxy_http_version 1.1;  # recommended with keepalive connections - http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_http_version
+
+        # WebSocket proxying - from http://nginx.org/en/docs/http/websocket.html
+        #proxy_set_header Upgrade $http_upgrade;
+        #proxy_set_header Connection $connection_upgrade;
+        proxy_set_header    X-Forwarded-SSL on;
+        proxy_redirect off;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Host $server_name;
+
+    }
+
+}
+```
 
 ## Testing & Restart
 
