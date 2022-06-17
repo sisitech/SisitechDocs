@@ -2,9 +2,11 @@
 
 Sisitech library that handles website navigation bars
 
+[![lib-mynavbar](../images/lib-navbar.png)]
+
 ## Installation
 ```
-npm i @sisitech/mynavbar --registry=http://npm.request.africa
+npm install @sisitech/mynavbar@0.0.1
 ```
 
 ## Usage
