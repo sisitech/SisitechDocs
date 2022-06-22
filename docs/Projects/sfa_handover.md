@@ -16,27 +16,27 @@
 
 The website content is divided into 6 key pages :
 
-1. [Home](https://storiesfromaround.com/) : This is the main landing page of the website. It's made up of a main header that welcomes readers to explore Stories From Around. Right below the welcome section is a brief teaser of some of the sample blogs. Finally, there's a subscribe form where readers can sign up to get any updates and additional information from Stories From Around.
+- [Home](https://storiesfromaround.com/) : This is the main landing page of the website. It's made up of a main header that welcomes readers to explore Stories From Around. Right below the welcome section is a brief teaser of some of the sample blogs. Finally, there's a subscribe form where readers can sign up to get any updates and additional information from Stories From Around.
 
 ![home page](../images/sfa/sfa.png)
 
-2. [Blogs](https://storiesfromaround.com/blogs/) : This page contains a carousel of blogs from a select category. It's accessed by pressing the 'Explore' button on the Home page welcome section.
+- [Blogs](https://storiesfromaround.com/blogs/) : This page contains a carousel of blogs from a select category. It's accessed by pressing the 'Explore' button on the Home page welcome section.
 
 ![blogs page](../images/sfa/blogs.png)
 
-3. [About Me](https://storiesfromaround.com/about/) : The About Me page contains an intriguing piece delving deeper into who Maryann is. It serves as a warm invite to readers into the life of the persona behind the articles on Stories From Around.
+- [About Me](https://storiesfromaround.com/about/) : The About Me page contains an intriguing piece delving deeper into who Maryann is. It serves as a warm invite to readers into the life of the persona behind the articles on Stories From Around.
 
 ![about me page](../images/sfa/about.png)
 
-4. [Photography](https://www.pexels.com/@maryannkariuki/) : Links out to Maryann's Pexels Profile that showcases her photography works.
+- [Photography](https://www.pexels.com/@maryannkariuki/) : Links out to Maryann's Pexels Profile that showcases her photography works.
 
 ![photography page](../images/sfa/photography.png)
 
-5. [Podcasts](https://anchor.fm/maryann-kariuki0) : Links out to Maryann's Podcast on Spotify.
+- [Podcasts](https://anchor.fm/maryann-kariuki0) : Links out to Maryann's Podcast on Spotify.
 
 ![podcasts page](../images/sfa/podcasts.png)
 
-6. [Contact](https://storiesfromaround.com/get-in-touch/) : Contains a brief form that allows readers to get in touch with Maryann.
+- [Contact](https://storiesfromaround.com/get-in-touch/) : Contains a brief form that allows readers to get in touch with Maryann.
 
 ![contact page](../images/sfa/contact.png)
 
