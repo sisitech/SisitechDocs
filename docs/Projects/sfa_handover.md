@@ -15,6 +15,7 @@
 ### **The FrontEnd**
 
 The website content is divided into 6 key pages :
+
 1. [Home](https://storiesfromaround.com/) : This is the main landing page of the website. It's made up of a main header that welcomes readers to explore Stories From Around. Right below the welcome section is a brief teaser of some of the sample blogs. Finally, there's a subscribe form where readers can sign up to get any updates and additional information from Stories From Around.
 
 ![home page](../images/sfa/sfa.png)
