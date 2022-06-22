@@ -45,7 +45,7 @@ The backend of the project is accessed by signing into the Stories From Around w
 
 ![panel](../images/sfa/panel.png)
 
-On clicking Dashboard, the control panel where edist to the site can be made opens up.
+On clicking Dashboard, the control panel where edits to the site can be made opens up.
 
 ![dashboard](../images/sfa/backend.png)
 
@@ -66,7 +66,7 @@ On clicking Dashboard, the control panel where edist to the site can be made ope
 
 1. On the top right side of the panel, click on the settings icon to open up a side panel fom which one can add extra specifications to a blog post.
 2. The side panel shows different settings one can customise for the new blog post as shown in the image above. 
-3. For example, to categorise the blog so that it shows when filtered by a spoecific filter, one clicks the Ctagories button on the side panel. A drop down appears with the different categories the blog can be tagged by.
+3. For example, to categorise the blog so that it shows when filtered by a spoecific filter, one clicks the Categories button on the side panel. A drop down appears with the different categories the blog can be tagged by.
 
 ![add category](../images/sfa/side_panel.png)
 
