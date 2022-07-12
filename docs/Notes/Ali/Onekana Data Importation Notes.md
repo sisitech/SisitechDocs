@@ -6,8 +6,7 @@
 ## Missing Fields
 - 🎟️ : Guardian county 
 - 🎟️ : Guardian subcounty
-- 🎟️ : Enrolment Data
-- 🎟️ : 
+- 🎟️ : Enrolment Date
 
 ## Issues
 - 🎟️ : Are there any learners with special needs? 
