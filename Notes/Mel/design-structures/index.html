@@ -1,0 +1,2483 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../images/sisitech-logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Design Specification Format - Sisitech Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Prompt";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/knsv/mermaid@6.0.0/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-9EC30HBXEL"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-9EC30HBXEL",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EC30HBXEL"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-specification-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Sisitech Docs" class="md-header__button md-logo" aria-label="Sisitech Docs" data-md-component="logo">
+      
+  <img src="../../../images/sisitech-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sisitech Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design Specification Format
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Sisitech Docs" class="md-nav__button md-logo" aria-label="Sisitech Docs" data-md-component="logo">
+      
+  <img src="../../../images/sisitech-logo.png" alt="logo">
+
+    </a>
+    Sisitech Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        SisitechDocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../General/markdown/" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Libraries" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Libraries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Libraries/carousel/" class="md-nav__link">
+        Sisitech Carousel Library
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Libraries/forms/" class="md-nav__link">
+        Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Libraries/navbar/" class="md-nav__link">
+        Sisitech Navigation Bar Library
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Libraries/tables/" class="md-nav__link">
+        Tables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Meetings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Meetings" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Meetings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/backlog/" class="md-nav__link">
+        Backlog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Minutes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Minutes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Minutes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1">
+          April & May
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="April & May" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          April & May
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/April%20%26%20May/26-05-2022/" class="md-nav__link">
+        26th May 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/April%20%26%20May/7-04-2022/" class="md-nav__link">
+        7th April 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_2" type="checkbox" id="__nav_5_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_2">
+          February
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="February" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          February
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/February/10-02-2022/" class="md-nav__link">
+        10th Feb 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/February/17-02-2022/" class="md-nav__link">
+        17th Feb 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3" type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3">
+          July
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="July" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          July
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/July/12-07-22/" class="md-nav__link">
+        12th July 2022 - Wavvy Wallet Brainstorm Meeting Minutes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/July/14-07-22/" class="md-nav__link">
+        14th July 2022 - Wavvy Wallet Meeting (at IHub)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/July/5-07-22/" class="md-nav__link">
+        5th July 2022 - Wavvy Wallet Brainstorm Meeting Minutes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_4" type="checkbox" id="__nav_5_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4">
+          June
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="June" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          June
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/June/17-06-2022/" class="md-nav__link">
+        17th June 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/June/3-06-2022/" class="md-nav__link">
+        3rd June 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_5" type="checkbox" id="__nav_5_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_5">
+          March
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="March" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          March
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/March/10-03-2022/" class="md-nav__link">
+        10th March 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/March/17-03-2022/" class="md-nav__link">
+        17th March 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/March/3-03-2022/" class="md-nav__link">
+        3rd March 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meetings/Minutes/March/31-03-2022/" class="md-nav__link">
+        31st March 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Notes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Ali
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ali" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ali
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Adobe-Animate/" class="md-nav__link">
+        Adobe Animate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Angular%20Observables/" class="md-nav__link">
+        Angular Observable Subscribe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Color-Pick-Eye_Dropper/" class="md-nav__link">
+        Color Pick Eye Dropper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Monzo/" class="md-nav__link">
+        Monzo - A Case Study Competitor Analysis for Wavvy Wallet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Onekana%20Data%20Importation%20Notes/" class="md-nav__link">
+        12-07-22 Onekana Data Importation Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Social%20Intelligence/" class="md-nav__link">
+        Social Intelligence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Spotify-Technical-Documentation/" class="md-nav__link">
+        Spotify Technical Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Theming%20Libraries/" class="md-nav__link">
+        Theming Libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/UI-Principles/" class="md-nav__link">
+        UI Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Wavvy-Wallet-Business-Case/" class="md-nav__link">
+        Wavvy Wallet Business Case
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ali/Web%20Animations/" class="md-nav__link">
+        Web Animations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Meiu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Meiu" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Meiu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/keptn/" class="md-nav__link">
+        Keptn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/keycloak/" class="md-nav__link">
+        Drf Keycloak Intergration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/me/" class="md-nav__link">
+        Micha
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/ng-schematics/" class="md-nav__link">
+        Angular Schematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/npm-link/" class="md-nav__link">
+        NPM LINK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/pgbouncer/" class="md-nav__link">
+        PG Bouncer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/supervisor/" class="md-nav__link">
+        Supervisor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_8" type="checkbox" id="__nav_6_2_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2_8">
+          Rust
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rust" data-md-level="3">
+        <label class="md-nav__title" for="__nav_6_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Rust
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Meiu/Rust/rust/" class="md-nav__link">
+        My Rust  Book
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Mel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Design Specification Format
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Design Specification Format
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-structure" class="md-nav__link">
+    Product Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-structure" class="md-nav__link">
+    Information Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aesthetic" class="md-nav__link">
+    Aesthetic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colour" class="md-nav__link">
+    Colour
+  </a>
+  
+    <nav class="md-nav" aria-label="Colour">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    An example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-breakdown-of-the-colors" class="md-nav__link">
+    A breakdown of the colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-resources" class="md-nav__link">
+    Color Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typography" class="md-nav__link">
+    Typography
+  </a>
+  
+    <nav class="md-nav" aria-label="Typography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typography-resources" class="md-nav__link">
+    Typography Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iconography" class="md-nav__link">
+    Iconography
+  </a>
+  
+    <nav class="md-nav" aria-label="Iconography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iconography-resources" class="md-nav__link">
+    Iconography Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../headless_cms/" class="md-nav__link">
+        Headless CMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tdd/" class="md-nav__link">
+        Test Driven Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wwdc22/" class="md-nav__link">
+        State of App Developement - #WWDC22
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4">
+          Ngatyah
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ngatyah" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ngatyah
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ngatyah/me/" class="md-nav__link">
+        Me
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5">
+          Ricox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ricox" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ricox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ricox/Wallets/" class="md-nav__link">
+        CRYPTO WALLETS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ricox/blockchain/" class="md-nav__link">
+        BLOCKCHAIN TECHNOLOGY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ricox/sdlc/" class="md-nav__link">
+        System Development Life Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ricox/tokenvscoin/" class="md-nav__link">
+        CRYPTO COIN VS CRYPTO TOKEN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ricox/unittest/" class="md-nav__link">
+        Software Testing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6">
+          Wesh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Wesh" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          Wesh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/A%20B%20testing/" class="md-nav__link">
+        A/B testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/Angular%20Inputs%20%26Outputs/" class="md-nav__link">
+        Angular Inputs & Outputs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/Kobotoolbox/" class="md-nav__link">
+        KoBotoolbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/Test%20Coverage/" class="md-nav__link">
+        Test Coverage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/Web%203.0/" class="md-nav__link">
+        Web 3.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wesh/fluent%20vs%20antd%20vs%20bootstrap%20vs%20material%20design/" class="md-nav__link">
+        UI Design Philosophies
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/employee-dashboard/" class="md-nav__link">
+        Employee Dashboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/sfa_handover/" class="md-nav__link">
+        Stories From Around Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/wavvy-wallet/" class="md-nav__link">
+        Wavvy Wallet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Onekana Digital Attendance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Onekana Digital Attendance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Onekana Digital Attendance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4_1" type="checkbox" id="__nav_7_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4_1">
+          Customizations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Customizations" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Customizations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/Onekana%20Digital%20Attendance/customizations/23-03-2022/" class="md-nav__link">
+        Training Report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Server Admin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Server Admin" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Server Admin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/Angular%20SVG/" class="md-nav__link">
+        Angular SVG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/angular%20library/" class="md-nav__link">
+        Setting Up Angular Libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/bootstrap/" class="md-nav__link">
+        Angular Bootstrap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/letsencrypt/" class="md-nav__link">
+        Letsencrypt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/nginx/" class="md-nav__link">
+        Nginx  Ubuntu 20.04
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/npm%20registry/" class="md-nav__link">
+        Switch to Github NPM Package Registry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Server%20Admin/postgres/" class="md-nav__link">
+        PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-structure" class="md-nav__link">
+    Product Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-structure" class="md-nav__link">
+    Information Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aesthetic" class="md-nav__link">
+    Aesthetic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colour" class="md-nav__link">
+    Colour
+  </a>
+  
+    <nav class="md-nav" aria-label="Colour">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    An example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-breakdown-of-the-colors" class="md-nav__link">
+    A breakdown of the colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-resources" class="md-nav__link">
+    Color Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typography" class="md-nav__link">
+    Typography
+  </a>
+  
+    <nav class="md-nav" aria-label="Typography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typography-resources" class="md-nav__link">
+    Typography Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iconography" class="md-nav__link">
+    Iconography
+  </a>
+  
+    <nav class="md-nav" aria-label="Iconography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iconography-resources" class="md-nav__link">
+    Iconography Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+
+
+<h1 id="design-specification-format">Design Specification Format</h1>
+<h2 id="about"><strong>About</strong></h2>
+<p>This section outlines a brief description of the application. Can be a descriptive one liner highlighting the purpose of the project. It can also provide general information about the project beyond what it's for; details like the client of the project, how the project works e.t.c.</p>
+<h2 id="product-structure"><strong>Product Structure</strong></h2>
+<p>This section describes the general structure of the application i.e how information is displayed, the sections in the application and the navigation used in the app. It has the following sub sections :</p>
+<h3 id="information-structure"><strong>Information Structure</strong></h3>
+<p>A description of how information is displayed on the application. In a nutshell information structure could take any one of the following structures:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Information Structure</th>
+<th align="left">Description</th>
+<th align="left">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Catalog Structure</strong></td>
+<td align="left">A catalog contains categorized, hierarchical data, with a top level consisting of peers which may each contain subordinate data. It is similar to a catalog that is basically a list of systematically organised items. Such a structure allows users to browse an area of interest, compare items to each other, and view the details of a specific item.</td>
+<td align="left"><a href="https://material.io/design/material-studies/basil.html">Material Design Basil</a> ; <a href="https://www.amazon.com/">Amazon</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Dashboard Structure</strong></td>
+<td align="left">A dashboard structure has two main columns with one side being the navigation panel and the main column being the section where UI is oragnised towards he specific tasks outlined on the navigation column</td>
+<td align="left"><a href="https://mail.google.com/mail/u/0/#inbox">G-mail</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Hierachical Structure</strong></td>
+<td align="left">This structure orgainses UI in a manner that allows users to view content through a variety of catgeroies from the most general view to the most detailed view.</td>
+<td align="left"><a href="#">Wavvy Wallet</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Hub and Spoke Structure</strong></td>
+<td align="left">This structure stats with a main section that serves as a "hub" where various "spokes", or chld nodes, are available for users to choose from. Once the user chooses a "spoke", the UI switches to the "spoke" whicb now becomes a "hub" with more "spokes" or child nodes</td>
+<td align="left"><a href="https://www.udemy.com/">Udemy</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Flow Structure</strong></td>
+<td align="left">A flow structure is a task-based structure, requiring screens to be accessed in consecutive order.</td>
+<td align="left"><a href="https://www.airbnb.com/">Airbnb</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="navigation"><strong>Navigation</strong></h3>
+<p>A brief of the structure of navigation panels used in the application on different screens. The section highlights the main sections of the application, what each section is about and also describes the tabs used to get from one section of the app to another.</p>
+<h3 id="aesthetic"><strong>Aesthetic</strong></h3>
+<p>A description of the look and feel of the application's user interface. The table below shows examples of different UI aesthetics an application can have:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Aesthetic</th>
+<th align="left">Description</th>
+<th align="left">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Functional Aesthetic</strong></td>
+<td align="left">UI has a simple approach to content making use of basic deign conecpets to display information. Functional aesthetic emphasises the functionality of the application, placing ease-of-use over design elements that don’t have a functional purpose.</td>
+<td align="left"><a href="https://material.io/design/material-studies/basil.html">Material Design - Reply</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Funky Aesthetic</strong></td>
+<td align="left">UI uses bold typography and color choices to communicate. This aesthetic is characterised by use of highly contrasting color themes, typefaces and shapes.</td>
+<td align="left"><a href="https://material.io/design/material-studies/owl.html">Material Design - Owl</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Premium Aesthetic</strong></td>
+<td align="left">A premium aesthetic is used makes use of dark backgound colors and bright accent colors to represent cotent so that it stands out against the background.</td>
+<td align="left"><a href="https://material.io/design/material-studies/rally.html">Material Design - Rally</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Data Driven Aesthetic</strong></td>
+<td align="left">UI is focused on inforgraphics elements such as charts and graphs inviting the user to view the app's data. This aesthetic is dense and direct with an emphais on color, shape and typography.</td>
+<td align="left"><a href="#">Onekana</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Minimal Aesthetic</strong></td>
+<td align="left">UI uses subtle design components that provide a straight forward and effortless display of content which gives the user an experience where content and actions take the forefront of the user experience.</td>
+<td align="left"><a href="https://material.io/design/material-studies/shrine.html">Material Design - Shrine</a></td>
+</tr>
+<tr>
+<td align="left"><strong>Content Focused Aesthetic</strong></td>
+<td align="left">This asthetic tends to have the UI mimic content display as it's done in real life. It's less about abstarct design and more about relaying the conte t exactly as it's relayed in real life.</td>
+<td align="left"><a href="https://material.io/design/material-studies/fortnighty.html">Material Design - Fortnighty</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="layout"><strong>Layout</strong></h2>
+<p>Describes how the application looks like on different screens i.e on mobile, tablet and desktop.Can also highlight the use of grids in to structure the application's UI.</p>
+<h2 id="colour"><strong>Colour</strong></h2>
+<p>Outlines the colour pallate of the application and the reasoning behind choosing these colours. This includes default colors for:</p>
+<ul>
+<li>Primary and secondary colors</li>
+<li>Variants of primary and secondary colors</li>
+<li>Additional UI colors, such as colors for backgrounds, surfaces, errors, typography, and iconography.</li>
+<li>Alternative colors</li>
+</ul>
+<h3 id="an-example"><strong>An example</strong></h3>
+<p><a href="https://material.io/design/color/the-color-system.html#color-theme-creation"><img alt="color pallete example" src="../../../images/color-pallete.png" /></a></p>
+<h3 id="a-breakdown-of-the-colors"><strong>A breakdown of the colors</strong></h3>
+<ol>
+<li><strong>Primary color</strong> : A primary color is the color displayed most frequently across an app’s screens and components.</li>
+<li><strong>Dark and light primary variants</strong> : The primary color can be used to make a color theme for an app by including dark and light primary color variants. These variants are used to create contrast between UI elements, such as a top app bar from a system bar.</li>
+<li>
+<p><strong>Secondary color</strong> : A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of the UI. If there's no secondary color, the primary color can also be used to accent elements. Secondary colors are best for:</p>
+</li>
+<li>
+<p>Floating action buttons</p>
+</li>
+<li>Selection controls, like sliders and switches</li>
+<li>Highlighting selected text</li>
+<li>Progress bars</li>
+<li>
+<p>Links and headlines</p>
+</li>
+<li>
+<p><strong>Dark and light secondary variants</strong> : Just like the primary color, the secondary color can have dark and light variants. A color theme can use the primary color, secondary color, and dark and light variants of each color.</p>
+</li>
+<li><strong>Surface colors</strong> : Affect surfaces of components, such as cards, sheets, and menus.</li>
+<li><strong>Background color</strong> : Appears behind scrollable content.</li>
+<li><strong>Error color</strong> : Indicates errors in components, such as invalid text in a text field.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note<p>Surface, background, and error colors typically don’t represent brand.</p>
+</p>
+</div>
+<ol>
+<li><strong>On colors</strong> : Referr to the fact that they color elements that appear “on” top of surfaces that use the following colors: a primary color, secondary color, surface color, background color, or error color. “On” colors are primarily applied to text, iconography, and strokes. Sometimes, they are applied to surfaces.</li>
+<li>
+<p><strong>Alternative colors</strong> : These are colors used as alternatives to the brand’s primary and secondary colors (they constitute additional colors to the theme). Alternative colors should be used cautiously, because they can be challenging to implement cohesively with existing color themes. They are best for:</p>
+</li>
+<li>
+<p>Apps with light and dark themes</p>
+</li>
+<li>Apps with different themes in different sections</li>
+<li>Apps that are part of a suite of products</li>
+</ol>
+<h3 id="color-resources"><strong>Color Resources</strong></h3>
+<ul>
+<li><a href="https://material.io/resources/color/#!/?view.left=0&amp;view.right=0">Material Design Color Tool</a></li>
+<li><a href="https://www.canva.com/colors/color-palettes/">Canva Pallete Generator</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg?utm_source=chrome-ntp-icon">Colorpick Eyedropper</a></li>
+</ul>
+<h2 id="typography"><strong>Typography</strong></h2>
+<p>This section outlines the font families used in the application and the variations of these typefaces for different components in the application. The example below shows the various typescales used in an application's UI:</p>
+<p><a href="https://material.io/design/typography/the-type-system.html#tools-for-picking-colors"><img alt="typescale example" src="../../../images/type-scale.png" /></a></p>
+<h3 id="typography-resources"><strong>Typography Resources</strong></h3>
+<ul>
+<li><a href="https://fonts.google.com/">Google Fonts</a></li>
+<li><a href="https://material.io/design/typography/the-type-system.html#tools-for-picking-colors">Material Design Typescale Generator</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?utm_source=chrome-ntp-icon">What Font Chrome Web Extension</a></li>
+</ul>
+<h2 id="iconography"><strong>Iconography</strong></h2>
+<p>Brief of the icons used in the application and the justification behind the choice.
+Can also link to the zipped folder with the application's icon pack.</p>
+<h3 id="iconography-resources"><strong>Iconography Resources</strong></h3>
+<ul>
+<li><a href="https://thenounproject.com/">Noun Project Icons</a></li>
+<li><a href="https://www.freepik.com/home">Freepik</a></li>
+</ul>
+<h2 id="components"><strong>Components</strong></h2>
+<p>Describes the key components of the application. E.g lists, forms, tabs, bottom sheets, tables, cards, buttons etc. Outlines their consistent look across the application.</p>
+
+              
+
+<!-- Giscus -->
+<h2 id="__comments">Comments</h2>
+
+<script src="https://giscus.app/client.js" data-repo="sisitech/SisitechDocs" data-repo-id="R_kgDOGyWqJQ"
+    data-category="General" data-category-id="DIC_kwDOGyWqJc4COCEs" data-mapping="title" data-reactions-enabled="1"
+    data-emit-metadata="0" data-input-position="top" data-theme="dark" data-lang="en" crossorigin="anonymous" async>
+    </script>
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+        if (palette.color.scheme === "slate") {
+            var giscus = document.querySelector("script[src*=giscus]")
+            giscus.setAttribute("data-theme", "dark") // (1)!
+        }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../Meiu/Rust/rust/" class="md-footer__link md-footer__link--prev" aria-label="Previous: My Rust  Book" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              My Rust  Book
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../headless_cms/" class="md-footer__link md-footer__link--next" aria-label="Next: Headless CMS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Headless CMS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
