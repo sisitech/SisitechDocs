@@ -26,8 +26,8 @@ Meta have implemented and allowed advertisers to incorporate customer lifetime v
            - 🎟️ :Total amount received from same number
            - 🎟️ :Date of latest transaction
            - 🎟️ :Date of first imported transaction
-           - 🎟️ :Lifetime = (Date of first imported transaction - Date of latest transaction) in days
-           - 🎟️ :CLV = (Lifetime x Amount Spent) / X
+           - 🎟️ :Lifetime = (Date of latest transaction - Date of first imported transaction) in days
+           - 🎟️ :CLV = (Lifetime x Amount Spent x Unique Visits) / X
 
 - Example of customer report with CLV. 
 
