@@ -124,3 +124,10 @@ REST_FRAMEWORK = {
 
 }
 ```
+
+### Table
+
+|First|Second|Third|
+|--:|--:|--:|
+
+|Hello|oad|[ x ]|
