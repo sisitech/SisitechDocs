@@ -6,7 +6,7 @@
 
 ## Installation
 ```
-npm install @sisitech/carousel@0.0.1
+npm install @sisitech/carousel@0.0.3
 ```
 
 ## Usage
