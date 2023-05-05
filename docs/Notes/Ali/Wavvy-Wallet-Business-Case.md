@@ -38,12 +38,12 @@ Meta have implemented and allowed advertisers to incorporate customer lifetime v
       
 ## Competitor Matrix
 
-- 🎟️ : [View Competitor Matrix Document](https://docs.google.com/spreadsheets/d/1GhEhEKRHmN0AVjjjTvewABs_8fqzlgOhV6xOIkynOAA/edit?usp=sharing)
+🎟️ : [View Competitor Matrix Document](https://docs.google.com/spreadsheets/d/1GhEhEKRHmN0AVjjjTvewABs_8fqzlgOhV6xOIkynOAA/edit?usp=sharing)
 
 
 ## References
 
-- 🎟️ : [How to Calculate Customer Lifetime Value](https://www.youtube.com/watch?v=eHi875QuVcA&ab_channel=EricAndrews)
+🎟️ : [How to Calculate Customer Lifetime Value](https://www.youtube.com/watch?v=eHi875QuVcA&ab_channel=EricAndrews)
 
 
 
