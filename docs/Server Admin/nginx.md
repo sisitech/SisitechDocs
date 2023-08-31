@@ -21,7 +21,7 @@ nano sampeApi
 
 - Paste the following sample and replace the higlighted lines
 
-``` config linenums="1" hl_lines="7 12 13 17 22" title="sampleApi"
+```config linenums="1" hl_lines="7 12 13 17 22" title="sampleApi"
 map $http_upgrade $connection_upgrade {
         default upgrade;
         '' close;
@@ -103,7 +103,7 @@ server {
 ```
 
 ## Configuring A static angular App
-
+```config
 server {
         listen 80;
         listen 443 ssl;
@@ -123,6 +123,7 @@ server {
                 add_header  Content-Type    application/x-javascript;
         }
 }
+```
 
 ## Enable API Config
 
