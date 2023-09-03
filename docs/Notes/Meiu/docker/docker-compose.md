@@ -53,6 +53,7 @@ version: "3.8"
 - `build` - To Build from a folder with a Dockerfile
 - `depends_on` - to list the services that must be created before it's created (`v2` and above)
 
+#### Networks
 
 
 
@@ -86,6 +87,7 @@ Volumes:
 
 ### Volumes
 
+- Its a map not a list
 ```yml
 version: "3.8"
 services:
@@ -100,6 +102,20 @@ Volumes:
 
 `docker compose up `
 
+
+## Networks
+- Its a map not a list
+
+- From version 3 docker creates a separate network for the for the compose file
+ 
+ ```yml
+ networks:
+  front-end:
+     driver: bridge
+  back-end:
+     driver: bridge
+     
+ ```
 
 
 
