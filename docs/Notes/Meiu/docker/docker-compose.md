@@ -56,6 +56,16 @@ version: "3.8"
 #### Networks
 
 
+Create a MacVlan network
+```bash title="bash"
+sudo docker network create -d macvlan --subnet 192.168.100.0/24 --gateway 192.168.100.1 -o parent=enp0s3 newasgd
+```
+
+Create a Overlay network
+```bash title="bash"
+sudo docker network create -d overlay  --attachable  registry
+```
+
 
 
 ```yml
@@ -114,7 +124,7 @@ Volumes:
      driver: bridge
   back-end:
      driver: bridge
-     
+
  ```
 
 
