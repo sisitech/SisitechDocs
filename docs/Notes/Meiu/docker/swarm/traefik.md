@@ -72,3 +72,6 @@ networks:
 
 !!! note
     Confirm the `traefik.docker.network=` if routing not working as expected 
+
+!!! note
+    When deploying the service using `compose` the `labels` are attached to the `service` while for docker  `swarm`  the `labels` are attached to the `deploy` section.
