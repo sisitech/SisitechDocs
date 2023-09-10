@@ -48,6 +48,13 @@ version: "3.8"
 - Services you need for your infrastructure
 - Could be named anything
 
+Check the progress of a certain service
+```bash
+ sudo docker service ps <service_id>
+```
+
+
+
 #### Properties
 - `ports` - To expose port
 - `build` - To Build from a folder with a Dockerfile
@@ -64,6 +71,11 @@ sudo docker network create -d macvlan --subnet 192.168.100.0/24 --gateway 192.16
 Create a Overlay network
 ```bash title="bash"
 sudo docker network create -d overlay  --attachable  registry
+```
+
+Creating an excrypted overlay entwork
+```bash title="bash"
+ sudo docker network create -d overlay --attachable --opt encrypted  --subnet=11.10.0.0/16 ovencrypt
 ```
 
 
