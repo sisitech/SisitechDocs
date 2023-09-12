@@ -188,8 +188,8 @@ services:
       
     
     environment:
-      - CLOUDFLARE_EMAIL=sisitechdev@gmail.com
-      - CLOUDFLARE_DNS_API_TOKEN=jjPCGFHXVluTuPvbxDrxExHk0tCPJgCdImyxNJ8h
+      - CLOUDFLARE_EMAIL=sddadada
+      - CLOUDFLARE_DNS_API_TOKEN=dadadadad
       
     networks:
       - ovencrypt
