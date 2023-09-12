@@ -158,3 +158,9 @@ Volumes:
 - Web server `nginx`
 
 ![Image](images/log_example.png)
+
+
+
+## Private Registry
+
+- Tag the image with the right link
