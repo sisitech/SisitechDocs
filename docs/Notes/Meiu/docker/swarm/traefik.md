@@ -231,3 +231,176 @@ networks:
     
   agent-network:
 ```
+
+
+## Traefik + LetsEncrypt + Grafana + Node Exporter + Cadvisor (Monitoring Metrics)
+
+```yml
+version: "3.9"
+
+services:
+  cadvisor:
+    image: docker
+    deploy:
+      mode: global
+    volumes: 
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+    entrypoint: ["/bin/sh","-c"]
+    environment:
+      - PARENT={{.Task.Name}}
+      - CHILDNAME={{.Service.Name}}_sidecar.{{.Node.ID}}.{{.Task.ID}}
+      - CADVISOR_VERSION=v0.37.5
+   
+    ports:
+      - "8080:8080"
+    networks:
+      - ovencrypt
+      
+    command: 
+    - |
+      exec docker run -i --rm --network="container:$${PARENT}" \
+            --volume=/:/rootfs:ro \
+            --volume=/var/run:/var/run:ro  \
+            --volume=/sys:/sys:ro  \
+            --volume=/var/lib/docker/:/var/lib/docker:ro \
+            --volume=/dev/disk/:/dev/disk:ro \
+            --name $${CHILDNAME} \
+            --privileged \
+            --device=/dev/kmsg \
+            gcr.io/cadvisor/cadvisor:$${CADVISOR_VERSION}
+    
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:v1.5.0
+    command: "--path.rootfs=/host"
+    pid: host
+    restart: unless-stopped
+    networks:
+      - ovencrypt
+    volumes:
+      - /:/host:ro,rslave
+      
+  grafana:
+    image: grafana/grafana-oss:latest
+    
+    networks:
+      - ovencrypt
+  
+    volumes:
+      - grafana-data:/var/lib/grafana
+    
+    ports:
+       - 4000:3000
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.grafana.rule=Host(`grafana.micha.africa`)" 
+        - "traefik.http.services.grafana.loadbalancer.server.port=3000"
+        - "traefik.docker.network=ovencrypt"
+        - "traefik.http.routers.grafana.tls=true"
+        - "traefik.http.routers.grafana.tls.certresolver=letsencrypt"
+    
+  prometheus:
+    image: prom/prometheus:latest
+    networks:
+      - ovencrypt
+    
+    volumes:
+      - /etc/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - 9090:9090
+    deploy:
+      placement:
+        constraints: 
+          - node.role == manager
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.prometheus.rule=Host(`prometheus.micha.africa`)" 
+        - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+        - "traefik.docker.network=ovencrypt"
+        - "traefik.http.routers.prometheus.tls=true"
+        - "traefik.http.routers.prometheus.tls.certresolver=letsencrypt"
+    
+        
+  traefik:
+    image: traefik:latest
+    command:
+      - --log.level=DEBUG
+      - --entrypoints.httpa.address=:80
+      - --providers.docker=true
+      - --providers.docker.exposedByDefault=true
+      - --providers.docker.swarmMode=true
+      - --api=true
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --accesslog=true
+      - --providers.docker.watch=true
+      # Letsencrypt setup
+      
+      - --certificatesresolvers.letsencrypt.acme.dnschallenge=true
+      - --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=cloudflare
+      - --certificatesresolvers.le.acme.dnschallenge.resolvers=1.1.1.1:53,8.8.8.8:53
+      - --certificatesresolvers.letsencrypt.acme.email=michameiu@gmail.com
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      # Set up an insecure listener that redirects all traffic to TLS
+      - --entrypoints.websecure.address=:443      
+      - --entrypoints.httpa.http.redirections.entrypoint.to=websecure
+      - --entrypoints.httpa.http.redirections.entrypoint.scheme=https
+      # Set up the TLS configuration for our websecure listener
+      - --entrypoints.websecure.http.tls=true
+      - --entrypoints.websecure.http.tls.certResolver=letsencrypt
+      
+     
+      
+    
+    environment:
+      - CLOUDFLARE_EMAIL=alkdjladljjns
+      - CLOUDFLARE_DNS_API_TOKEN=daduyauydga
+      
+    networks:
+      - ovencrypt
+      
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - certs:/letsencrypt
+    
+    ports:
+      - 80:80
+      - 443:443
+        
+      
+    deploy:
+      mode: global  
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.traefikae.tls=true"
+        - "traefik.http.routers.traefikae.tls.domains[0].main=micha.africa"
+        - "traefik.http.routers.traefikae.tls.domains[0].sans=*.micha.africa"
+        - "traefik.http.routers.traefikae.tls.certresolver=letsencrypt"
+        
+        - "traefik.http.routers.traefikae.rule=Host(`traefik.micha.africa`)" 
+        - "traefik.http.services.traefikae.loadbalancer.server.port=8080"
+        - "traefik.docker.network=ovencrypt"
+        - "traefik.http.middlewares.traefikae-auth.basicauth.users=micha:$$2y$$05$$NrR4hl3V7uCFT8nOdc5ZC.1AHuTjx4ysafhpBe2s0xX12eCG81VUO"
+        - "traefik.http.routers.traefikae.middlewares=traefikae-auth"
+          
+
+volumes:
+  grafana-data:
+  prometheus-data:
+  certs:
+  agent-volume:
+  portainer-data:
+    
+networks:
+  host:
+    external: true
+  ovencrypt:
+    external: true
+    attachable: true
+    
+  agent-network:
+```
