@@ -164,3 +164,8 @@ Volumes:
 ## Private Registry
 
 - Tag the image with the right link
+
+
+## Logs
+- Restrict the daemon logs size in daemon.json
+- ci/cd  
