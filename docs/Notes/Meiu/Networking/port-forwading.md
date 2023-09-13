@@ -30,3 +30,8 @@ Then I changed the arguments on the client like this:
 - `ssh root@X.X.X.X -R 10.10.10.1:443:127.0.0.1:443`
 
 Now it works as expected, SSH binds to port `443` on interface `10.10.10.1` and forwards all traffic over the tunnel to `localhost:443` 
+
+
+```bash title="bash $"
+netstat -lntu
+```
