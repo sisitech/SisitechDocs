@@ -338,13 +338,20 @@ services:
       - --api.insecure=true
       - --accesslog=true
       - --providers.docker.watch=true
-      # Letsencrypt setup
-      
+
+      # Letsencrypt setup HTTP CHALLENGE
+      - --certificatesresolvers.myresolver.acme.httpchallenge=true
+      - --certificatesResolvers.myresolver.acme.httpChallenge.entryPoint=httpa
+      - --certificatesresolvers.myresolver.acme.email=michameiu@gmail.com
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme2.json
+
+      # Letsencrypt setup DNS CHALLENGE
       - --certificatesresolvers.letsencrypt.acme.dnschallenge=true
       - --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=cloudflare
       - --certificatesresolvers.le.acme.dnschallenge.resolvers=1.1.1.1:53,8.8.8.8:53
       - --certificatesresolvers.letsencrypt.acme.email=michameiu@gmail.com
       - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      
       # Set up an insecure listener that redirects all traffic to TLS
       - --entrypoints.websecure.address=:443      
       - --entrypoints.httpa.http.redirections.entrypoint.to=websecure
@@ -432,4 +439,53 @@ scrape_configs:
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['cadvisor:8080']
+```
+
+
+
+## Traefik Monitoring
+
+```yml
+version: "3.9"
+
+services:
+  traefika:
+    image: traefik:latest
+    command:
+      - --log.level=DEBUG
+      - --entrypoints.httpa.address=:80
+      - --providers.docker=true
+      - --providers.docker.exposedByDefault=true
+      - --providers.docker.swarmMode=true
+      - --api=true
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --accesslog=true
+      - --providers.docker.watch=true
+      ## MEtrics
+      - --metrics.prometheus=true
+      - --entryPoints.metrics.address=:8082
+      - --metrics.prometheus.buckets=0.1,0.3,1.2,5.0
+      - --metrics.prometheus.addEntryPointsLabels=true
+      - --metrics.prometheus.addrouterslabels=true
+      - --metrics.prometheus.addServicesLabels=true
+      - --metrics.prometheus.entryPoint=metrics
+      ...
+    deploy:
+      mode: global
+      placement:
+        constraints: 
+          - node.role == manager      
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.traefikae.rule=Host(`traefik.example.com`)" 
+        - "traefik.http.services.traefikae.loadbalancer.server.port=8080"
+        - "traefik.http.routers.traefikae.service=traefikae"
+        - "traefik.docker.network=ovencrypt"
+        - "traefik.http.middlewares.traefikae-auth.basicauth.users=micha:$$2y$$05$$NrR4hl3V7uCFT8nOdc5ZC.1AHuTjx4ysafhpBe2s0xX12eCG81VUO"
+        - "traefik.http.routers.traefikae.middlewares=traefikae-auth"
+        
+        - "traefik.http.routers.metrics.rule=Host(`metrics.example.com`)" 
+        - "traefik.http.services.metrics.loadbalancer.server.port=8082"
+        - "traefik.http.routers.metrics.service=metrics"
 ```
