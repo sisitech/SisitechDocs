@@ -351,7 +351,7 @@ services:
       - --certificatesresolvers.le.acme.dnschallenge.resolvers=1.1.1.1:53,8.8.8.8:53
       - --certificatesresolvers.letsencrypt.acme.email=michameiu@gmail.com
       - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
-      
+
       # Set up an insecure listener that redirects all traffic to TLS
       - --entrypoints.websecure.address=:443      
       - --entrypoints.httpa.http.redirections.entrypoint.to=websecure
@@ -489,3 +489,28 @@ services:
         - "traefik.http.services.metrics.loadbalancer.server.port=8082"
         - "traefik.http.routers.metrics.service=metrics"
 ```
+
+
+## Traefik  Middlewares & Gzip Compress
+
+- Defined the middleware in the labels section
+```yml
+...
+deploy:
+      ...    
+      labels:
+        - "traefik.http.middlewares.traefikae-compress.compress=true"
+..
+```
+
+- Activate the middleware in the router of your choice section
+
+```yml
+...
+deploy:
+      ...    
+      labels:
+        - "traefik.http.routers.traefikae.middlewares=traefikae-auth,traefikae-compress"
+..
+```
+- 
