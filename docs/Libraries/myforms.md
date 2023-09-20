@@ -2,9 +2,10 @@
 
 ## Introduction
 
-- Welcome to Sisitech Forms, your go-to library for simplifying form management in web development. Sisitech Forms is a powerful and versatile forms library designed to streamline the way users interact with web pages by facilitating the submission of data to servers for processing. 
+- Welcome to Sisitech Forms, your go-to library for simplifying form management in web development. 
+- Sisitech Forms is a powerful and versatile forms library designed to streamline the way users interact with web pages by facilitating the submission of data to servers for processing. 
 
-<img src="../../images/../docs/images/myforms/multi-form.png" height="600" width="1000">
+<img src="../../images/myforms/multi-form.png" height="600" width="1000">
 
 ### Key Features and Benefits:
 
@@ -12,6 +13,8 @@
 2. **Enhanced Validation**: Our library offers robust front-end and server-side validation capabilities, ensuring that data submitted through your forms is accurate, secure, and compliant with your application's requirements.
 3. **Streamlined HTTP Requests**: Sisitech Forms simplifies the process of sending and receiving data between the client and server. Handle HTTP requests with ease, making it effortless to interact with your backend services.
 4. **Customization Options**: Tailor the forms to match your project's unique requirements. Our library provides a range of customization options, allowing you to create forms that seamlessly integrate with your application's look and feel.
+
+<br>
 
 - Explore the following sections of this documentation to get started with Sisitech Forms:
   - [Getting Started](#getting-started): Learn how to install and set up Sisitech Forms in your project.
@@ -23,10 +26,13 @@
 ## Getting Started
 
 ### Installation
+
 **Setting up Sisitech npm registry**
+<br>
 - Before installing myforms, make sure you've setup Sisitech's npm registry on your local computer. Click [Switch to Github NPM Package Registry](https://sisitech.github.io/SisitechDocs/Server%20Admin/npm%20registry/) to learn more.
 
 **Basic Installation**
+<br>
 - Once installed to start using Sisitech Forms in your project, you'll need to install it via npm or package.json. 
 - Open your terminal and run one of the following commands, depending on your package manager of choice:
 
@@ -97,11 +103,11 @@ export class AppModule { }
 #### Creating the Options.ts file**
 - Create an options.ts file 
 
-<img src="../../images/../docs/images/myforms/options_ts.png" width="600">
+<img src="../../images/myforms/options_ts.png" width="600">
 
 - Go to your specific API endpoint and click on the options button to get the options file. 
 
-<img src="../../images/../docs/images/myforms/click-options.png" width="1000">
+<img src="../../images/myforms/click-options.png" width="1000">
 
 - Define and export an options object in your options file
 
@@ -180,7 +186,6 @@ export {
 
 ```
 
----
 
 ### Setting up the Frontend
 - Add `<app-myform></app-myform>` tag to the **html** file
@@ -464,7 +469,7 @@ export class AddComponent implements OnInit {
 **Final Output**
 - The final form will be served as follows:
 
-<img src="../../images/../docs/images/myforms/single-form.png">
+<img src="../../images/myforms/single-form.png">
 
 ##### Multi-Form
 - An example for how to set up a **multi form** in typescript:
@@ -644,4 +649,4 @@ export class AddPatientComponent implements OnInit, OnDestroy {
 **Final Output**
 - The final form will be served as follows:
 
-<img src="../../images/../docs/images/myforms/multi-form.png">
+<img src="../../images/myforms/multi-form.png">
