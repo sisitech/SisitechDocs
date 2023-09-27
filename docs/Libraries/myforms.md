@@ -78,7 +78,7 @@ export const authConfig = {
   version: "api/v1",
   tokenUrl: "o/token/",
   revokeTokenUrl: "o/revoke_token/",
-  clientId: "RJ2U5wgrjmzKbf1RE1vRqgQ6kLeqbIOL5Ua6m3mv",
+  clientId: "YOUR CLIENT ID",
 }
 
 @NgModule({
