@@ -48,12 +48,35 @@ version: "3.8"
 - Services you need for your infrastructure
 - Could be named anything
 
+Check the progress of a certain service
+```bash
+ sudo docker service ps <service_id>
+```
+
+
+
 #### Properties
 - `ports` - To expose port
 - `build` - To Build from a folder with a Dockerfile
 - `depends_on` - to list the services that must be created before it's created (`v2` and above)
 
+#### Networks
 
+
+Create a MacVlan network
+```bash title="bash"
+sudo docker network create -d macvlan --subnet 192.168.100.0/24 --gateway 192.168.100.1 -o parent=enp0s3 newasgd
+```
+
+Create a Overlay network
+```bash title="bash"
+sudo docker network create -d overlay  --attachable  registry
+```
+
+Creating an excrypted overlay entwork
+```bash title="bash"
+ sudo docker network create -d overlay --attachable --opt encrypted  --subnet=11.10.0.0/16 ovencrypt
+```
 
 
 
@@ -86,6 +109,7 @@ Volumes:
 
 ### Volumes
 
+- Its a map not a list
 ```yml
 version: "3.8"
 services:
@@ -100,6 +124,20 @@ Volumes:
 
 `docker compose up `
 
+
+## Networks
+- Its a map not a list
+
+- From version 3 docker creates a separate network for the for the compose file
+ 
+ ```yml
+ networks:
+  front-end:
+     driver: bridge
+  back-end:
+     driver: bridge
+
+ ```
 
 
 
@@ -120,3 +158,14 @@ Volumes:
 - Web server `nginx`
 
 ![Image](images/log_example.png)
+
+
+
+## Private Registry
+
+- Tag the image with the right link
+
+
+## Logs
+- Restrict the daemon logs size in daemon.json
+- ci/cd  
