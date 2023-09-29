@@ -494,7 +494,7 @@ services:
 ## Traefik  Middlewares & Gzip Compress
 
 - Defined the middleware in the labels section
-```yml
+```yml title="docker-compose.yml"
 ...
 deploy:
       ...    
@@ -505,7 +505,7 @@ deploy:
 
 - Activate the middleware in the router of your choice section
 
-```yml
+```yml title="docker-compose.yml"
 ...
 deploy:
       ...    
@@ -513,4 +513,71 @@ deploy:
         - "traefik.http.routers.traefikae.middlewares=traefikae-auth,traefikae-compress"
 ..
 ```
-- 
+
+
+
+!!! warning
+    **Debuggin Tip**
+    - Alwasy confirm the traefik router names and traefik service names are unique per docker service. Traefik will crash otherwise. 
+
+
+
+## Get Real Ip without Cloudflare reverse proxy
+- To get the real ip update the traefik ports to use the host mode
+```yml
+...
+services:
+   traefik:
+      ports:
+        - mode: host
+          protocol: tcp
+          published: 80
+          target: 80
+        - mode: host
+          protocol: tcp
+          published: 443
+          target: 443
+
+```
+
+## Get Real Ip with Cloudflare reverse proxy
+- Configure traefik static config
+**Static Config**
+```yml title="static config"
+      - --experimental.plugins.cloudflarewarp.modulename=github.com/soulbalz/traefik-real-ip
+      - --experimental.plugins.cloudflarewarp.version=v1.0.3
+```
+
+!!! note
+    Note the name of your plugin. In the above example the plugin is initialized as `cloudflarewarp`
+
+**Dynamic Config**
+- Define the middleware on the traefik service labels
+```yml title="Traefik Labels"
+      - "traefik.http.middlewares.my-traefik-real-ip.plugin.cloudflarewarp.excludednets=1.1.1.1/24"
+```
+
+!!! note
+    Note the name of your middleware. In the above example the plugin is initialized as `my-traefik-real-ip` using the plugin `cloudflarewarp` defined earlier.
+
+- Enalbe the middleware on any docker swarm service
+```yml title="Traefik Labels"
+      - "traefik.http.middlewares.my-traefik-real-ip.plugin.cloudflarewarp.excludednets=1.1.1.1/24"
+```
+
+
+
+
+## DEBUGGING PORTS
+
+- Install tools
+```bash title="➜  ~ "
+apt-get update -y
+apt-get install -y iputils-ping net-tools 
+
+```
+
+- Check the open ports
+```bash title="➜  ~ "
+netstat -pnltu
+```
