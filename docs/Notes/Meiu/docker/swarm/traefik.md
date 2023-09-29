@@ -552,6 +552,7 @@ services:
     Note the name of your plugin. In the above example the plugin is initialized as `cloudflarewarp`
 
 **Dynamic Config**
+
 - Define the middleware on the traefik service labels
 ```yml title="Traefik Labels"
       - "traefik.http.middlewares.my-traefik-real-ip.plugin.cloudflarewarp.excludednets=1.1.1.1/24"
@@ -565,6 +566,39 @@ services:
       - "traefik.http.middlewares.my-traefik-real-ip.plugin.cloudflarewarp.excludednets=1.1.1.1/24"
 ```
 
+
+
+- Use the `traefik/whoami` to confirm if the`ip` is forwarded correctly
+```yml title="docker-compose.yml"
+
+ whoami:
+    image: traefik/whoami
+    networks:
+      - ovencrypt
+    
+    deploy:
+      mode: global    
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.whoami.rule=Host(`whoami.domain.com`)"   
+        - "traefik.http.services.whoami.loadbalancer.server.port=80"
+        - "traefik.docker.network=ovencrypt" 
+        - "traefik.http.routers.whoami.middlewares=my-traefik-real-ip"
+        
+    
+  whoaminot:
+    image: traefik/whoami
+    networks:
+      - ovencrypt
+    
+    deploy:
+      mode: global    
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.whoaminot.rule=Host(`whoami.domain.com`)"   
+        - "traefik.http.services.whoaminot.loadbalancer.server.port=80"
+        - "traefik.docker.network=ovencrypt"
+```
 
 
 
@@ -581,3 +615,5 @@ apt-get install -y iputils-ping net-tools
 ```bash title="➜  ~ "
 netstat -pnltu
 ```
+
+
