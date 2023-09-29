@@ -46,7 +46,6 @@ extra:
 
 extra_css:
   - css/extra.css
-  - https://cdn.jsdelivr.net/gh/knsv/mermaid@6.0.0/dist/mermaid.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
