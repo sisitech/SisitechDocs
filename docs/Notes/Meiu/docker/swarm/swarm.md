@@ -10,6 +10,7 @@
 - Chose an interface to advertise
 
 
+
 ```bash title="bash"
 swarm init  --advertise-addr 192.168.56.1
 ```
@@ -69,6 +70,21 @@ docker swarm leave
 ```bash title="bash-MASTER"
 docker node rm bash-NODE
 ```
+
+
+## Secrets
+
+```bash
+printf "my super secret password" | docker secret create my_secret -
+
+onakdyv307se2tl7nl20anokv
+
+docker secret ls
+
+ID                          NAME                CREATED             UPDATED
+onakdyv307se2tl7nl20anokv   my_secret           6 seconds ago       6 seconds ago
+```
+
 
 ## Services
 
