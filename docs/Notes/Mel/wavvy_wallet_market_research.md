@@ -19,14 +19,14 @@
 
 <br>
 
-| Influencer                                     | IG Handle                                                       | Influencer Highlights                                                                                               | Rate Card |
-| ---------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------- |
-| <img src="../../images/wavvy/just_ivy.png" height="120" width="110"> | [just_ivy_africa_](https://www.instagram.com/just_ivy_africa_/) | <ul><li>Biggest Finance Litercay Brand In Kenya</li><li>WIde audience - featuring mostly millenials and Gen Z.</li> | ? / story |
-| <img src="../../images/wavvy/susan.png" height="120" width="110">      | [susan.wanjiku](https://www.instagram.com/susan.wanjiku_/)      | Featured by business daily as O.G finance coach                                                                     | ? / story |
-| <img src="../../images/wavvy/dj-lapoze.png" height="120" width="110">       | [djlapoze](https://www.instagram.com/djlapoze/)                 | <ul><li>Male Audience</li></ul>                                                                                     | ? / story |
-| <img src="../../images/wavvy/pesa-savy.png" height="120" width="110"> | [julietodhiambo](https://www.instagram.com/julietodhiambo)      | <ul><li>An expert in the domain, may offer insights herself</li><li>General finance literacy channel</li></ul>      | ? / story |
-| <img src="../../images/wavvy/money-clinic.png" height="120" width="110"> | [money_clinicke](https://www.instagram.com/money_clinicke/)     | <ul><li>General finance literacy channel</li></ul>                                                                  | ? / story |
-| <img src="../../images/wavvy/money-africa.png" height="120" width="110"> | [moneyafrica](https://www.instagram.com/moneyafrica/)           | <ul><li>General finance literacy channel</li></ul>                                                                  | ? / story |
+| Influencer                                     | IG Handle                                                       | Influencer Highlights                                                                                               | Rate Card | Contact |
+| ---------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------- |--------- |
+| <img src="../../images/wavvy/just_ivy.png" height="120" width="110"> | [just_ivy_africa_](https://www.instagram.com/just_ivy_africa_/) | <ul><li>Biggest Finance Litercay Brand In Kenya</li><li>WIde audience - featuring mostly millenials and Gen Z.</li> | ? / story | business@justivyafrica.com |
+| <img src="../../images/wavvy/susan.png" height="120" width="110">      | [susan.wanjiku](https://www.instagram.com/susan.wanjiku_/)      | Featured by business daily as O.G finance coach                                                                     | ? / story |info@thelegacyhub.co.ke / 0707 446 769|
+| <img src="../../images/wavvy/dj-lapoze.png" height="120" width="110">       | [djlapoze](https://www.instagram.com/djlapoze/)                 | <ul><li>Male Audience</li></ul>                                                                                     | ? / story ||
+| <img src="../../images/wavvy/pesa-savy.png" height="120" width="110"> | [julietodhiambo](https://www.instagram.com/julietodhiambo)      | <ul><li>An expert in the domain, may offer insights herself</li><li>General finance literacy channel</li></ul>      | ? / story | pesasavvy@gmail.com / 0719 731 828|
+| <img src="../../images/wavvy/money-clinic.png" height="120" width="110"> | [money_clinicke](https://www.instagram.com/money_clinicke/)     | <ul><li>General finance literacy channel</li></ul>                                                                  | ? / story |+254750048153|
+| <img src="../../images/wavvy/money-africa.png" height="120" width="110"> | [moneyafrica](https://www.instagram.com/moneyafrica/)           | <ul><li>General finance literacy channel</li></ul>                                                                  | ? / story |info@themoneyafrica.com|
 
 <br>
 
@@ -36,3 +36,7 @@
 
 ## Influencer Brief
 [Expense Tracking Survey Brief](https://docs.google.com/document/d/1Hl9xoFxuiUTl8XZYoQmeorm9cyfVH9kHvmYKqTwC6R8/edit?usp=sharing)
+
+## Influencer Cold Email Template
+[Influencer Cold Email Template](https://docs.google.com/document/d/1mvse3PSCA9HB0xCmU0jQxvVOUeiQF8g-PF7-6tLfoiU/edit?usp=sharing)
+
