@@ -27,6 +27,10 @@
 | <img src="../../images/wavvy/pesa-savy.png" height="120" width="110"> | [julietodhiambo](https://www.instagram.com/julietodhiambo)      | <ul><li>An expert in the domain, may offer insights herself</li><li>General finance literacy channel</li></ul>      | ? / story | pesasavvy@gmail.com / 0719 731 828|
 | <img src="../../images/wavvy/money-clinic.png" height="120" width="110"> | [money_clinicke](https://www.instagram.com/money_clinicke/)     | <ul><li>General finance literacy channel</li></ul>                                                                  | ? / story |+254750048153|
 | <img src="../../images/wavvy/money-africa.png" height="120" width="110"> | [moneyafrica](https://www.instagram.com/moneyafrica/)           | <ul><li>General finance literacy channel</li></ul>                                                                  | ? / story |info@themoneyafrica.com|
+| <img src="" height="120" width="110"> | [Claire Nansikombi](https://www.instagram.com/be.your.own.boss.babe/)           | <ul><li>Business Coach</li></ul>                                                                  | ? / story |claire@beyourownbossbabe.com|
+| <img src="" height="120" width="110"> | [Wanjiku The Startup Consultant](https://www.instagram.com/wanjikustartupconsultant)           | <ul><li>Startup Consultant</li></ul>                                                                  | ? / story |0711194414|
+| <img src="" height="120" width="110"> | [Clarence Muhoro](https://www.instagram.com/clarence_muhoro/)           | <ul><li>Investment Coach</li></ul>                                                                  | ? / story ||
+| <img src="" height="120" width="110"> | [Trish Maina](https://www.instagram.com/trish_maina/)           | <ul><li>Beauty, Fashion and Lifestyle Creator</li></ul>                                                                  | ? / story |partnerships.trishmaina@gmail.com|
 
 <br>
 
