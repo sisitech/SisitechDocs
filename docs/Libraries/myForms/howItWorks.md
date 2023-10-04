@@ -1,5 +1,5 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
+# How it Works
+- [How it Works](#how-it-works)
   - [Folder Structure](#folder-structure)
   - [Starting Points](#starting-points)
     - [myform.component.ts](#myformcomponentts)

@@ -1,7 +1,6 @@
 # Getting Started
 
 ## Setting up Sisitech npm registry
-<br>
 - Before installing myforms, make sure you've setup Sisitech's npm registry on your local computer. 
 - Click [Switch to Github NPM Package Registry](https://sisitech.github.io/SisitechDocs/Server%20Admin/npm%20registry/) to learn more.
 
