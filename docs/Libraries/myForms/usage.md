@@ -4,7 +4,7 @@
 - There are two ways to render myForms i.e the **single** form or the **multi-step** form. 
 
 <br>
-<img src="../../images/myforms//both-forms.png" height="600" width="1100">
+<img src="../../../images/myforms//both-forms.png" height="600" width="1100">
 <br>
 
 - In this tutorial, we will use a hospital records management system to demonstrate the library's usage. The example below shows an example to add a vaccine.
@@ -21,7 +21,7 @@ ng generate component add
 - The steps to setting up a functional form using Sisitech forms can be generalized into three key steps:
 
 <br>
-<img src="../../images/myforms//myforms-usage.png" height="110" width="500">
+<img src="../../../images/myforms//myforms-usage.png" height="110" width="500">
   
 ## Defining Form Fields
 - MyForms uses the data fields defined in the backend models of your project to generate the fields to be rendered on the form.
@@ -29,14 +29,14 @@ ng generate component add
 - Once we've created the component, the next step is to setup the options.ts file in your project folder in which we will copy and paste the options data provided by the Django endpoint. 
 
 
-<img src="../../images/myforms/options_ts.png" width="200" height="200">
+<img src="../../../images/myforms/options_ts.png" width="200" height="200">
 
 - Next, go to your specific API endpoint and click on the options button to get the options file. 
 
 !!! note
     TODO: Update the image below to show the vaccines api endpoint
 
-<img src="../../images/myforms/click-options.png" width="1000">
+<img src="../../../images/myforms/click-options.png" width="1000">
 
 - Once copied, define and export an options object in your options file
 
@@ -283,7 +283,7 @@ section1: MyFormSection = {
 - We passed the filterOptions we defined in the options.ts file to the formItems variable. As seen, the names within the formGroupOrder are the same names sourced from the options.ts file.
 - The final form will be served as follows:
 
-<img src="../../images/myforms/single-form.png">
+<img src="../../../images/myforms/single-form.png">
 
 ### Multi-step Form
 - For a multi-step form, we call the <sistch-multistep-form></sistch-multistep-form> in html as shown. As ypu can see, most of the inputs being passed to the multi-step form are being abstarcted in the [options] input to which we pass the multiStepForm variable we will soon define in the component file:
@@ -368,9 +368,11 @@ section1: MyFormSection = {
 ```
 - The final form will be served as follows:
 
-<img src="../../images/myforms/multi-form.png">
+<img src="../../../images/myforms/multi-form.png">
 
 **Useful Links**
+<br>
+
 - [Overview](../myForms/overview.md): Introduction to myForms.
 - [Getting Started](../myForms/gettingStarted.md): Learn how to install and set up Sisitech Forms in your project.
 - [How it works](../myForms//howItWorks.md): Dive into the details of the library's functions, classes, and components.

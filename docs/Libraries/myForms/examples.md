@@ -133,7 +133,7 @@ export class AddComponent implements OnInit {
 ### Final Output
 - The final form will be served as follows:
 
-<img src="../../images/myforms/single-form.png">
+<img src="../../../images/myforms/single-form.png">
 
 ## Multi-Form
 
@@ -323,7 +323,7 @@ export class AddPatientComponent implements OnInit, OnDestroy {
 ### Final Output
 - The final form will be served as follows:
 
-<img src="../../images/myforms/multi-form.png">
+<img src="../../../images/myforms/multi-form.png">
 
 **Useful Links**
 - [Overview](../myForms/overview.md): Introduction to myForms.

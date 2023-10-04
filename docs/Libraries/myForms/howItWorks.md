@@ -1,11 +1,4 @@
 # How it Works
-- [How it Works](#how-it-works)
-  - [Folder Structure](#folder-structure)
-  - [Starting Points](#starting-points)
-    - [myform.component.ts](#myformcomponentts)
-    - [myform.component.html](#myformcomponenthtml)
-    - [myform.component.scss](#myformcomponentscss)
-  - [Supporting Components](#supporting-components)
 
 ## Folder Structure
 
