@@ -326,6 +326,8 @@ export class AddPatientComponent implements OnInit, OnDestroy {
 <img src="../../../images/myforms/multi-form.png">
 
 **Useful Links**
+<br>
+
 - [Overview](../myForms/overview.md): Introduction to myForms.
 - [Getting Started](../myForms/gettingStarted.md): Learn how to install and set up Sisitech Forms in your project.
 - [Usage](../myForms/usage.md): Discover how to create, customize, and work with forms using our library.

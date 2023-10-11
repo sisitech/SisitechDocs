@@ -9,7 +9,7 @@
 ## Folder Structure
 - The image below shows the folder structure of the MyForms library and a brief explanation of what each folder/file is about:
   <br>
- <img src="../../../docs/images/myforms/MyForms-folder-structure-explained.jpg" height="600" width="1100">
+ <img src="../../../images/myforms/MyForms-folder-structure-explained.jpg" height="600" width="1100">
   <br>
 
 - The table below gives a more detailed breakdown of the key files in the structure above:
@@ -31,7 +31,7 @@
  
   <br>
 
-## Starting Points : The HTML & TS Files
+## Key Files & Components
 - Now that we know the different files that make up the MyForms Library, it's time to delve into the core components of this library. 
 - As mentioned earlier, the best place to start is the two html files for myforms and the multistep-form.
 
@@ -46,6 +46,9 @@
 - The table below shows another summary of the inputs and outputs the component.ts file features:
 
 **Inputs**
+
+<br>
+
 | Input                     | Description                                                                             |
 |---------------------------|-----------------------------------------------------------------------------------------|
 | `formGroup`               | The Angular FormGroup for the form.                                                    |
@@ -69,7 +72,11 @@
 | `hideButtons`            | Indicates whether to hide buttons. Default is `false`.                                  |
 | `formGroupOrder`         | Order of form group elements.                                                           |
 
+<br>
+
 **Outputs**
+<br>
+
 | Output               | Description                                      |
 |----------------------|--------------------------------------------------|
 | `onValidatedData`    | Emits validated form data.                      |
@@ -78,12 +85,16 @@
 | `onFormChanges`      | Emits form changes.                              |
 | `instance`           | Output instance data.                           |
 
+<br>
+
 !!! note
     Please note that not all Inputs and Outputs have been documented, but this table covers the most important ones.
 
 ### Key Functions
 - The table below, provides a breakdown of the key functions within the myforms component that handle the rendering of the form as well as well as data handling of the form.
 - It shows the functions in the component, arguments they accept, their purpose and their return values if any.
+
+<br>
 
 | Function                 | Arguments                                 | Description                                                                                           | Output                   |
 |--------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------------|--------------------------|
@@ -114,12 +125,16 @@
 | `showSnackBar`          | `message: string`                        | Displays a snackbar message.                                                                         | None                     |
 | `getControl`            | `name: string`                           | Retrieves a form control by name.                                                                    | Returns a form control or a new FormControl. |
 
+<br>
+
 ### MyInput Component
 - The provided component is designed to render various types of form fields based on the specified `formControlType`. 
 - It can be used in both form-only and filter-only contexts, allowing for the creation of user interfaces for data entry and filtering in Angular applications. 
 - This versatile component can handle a wide range of form field types, including dropdown selects, multiple selects, checkboxes, image displays, text areas, custom multi-select fields, file inputs, and text inputs. Each form field type is customized to display and interact with the user's data in a specific way. 
 - This component serves as a flexible building block for creating forms and filters in Angular applications, enhancing user interactions and data management.
 - The table below shows the different form field types that can be rendered based on the `formControlType` passed. The descriptions provide an overview of their functionality, and any special notes indicate specific behavior or characteristics to be aware of.
+
+<br>
 
 | Form Field Type      | Description                                | Special Notes                              |
 |----------------------|--------------------------------------------|-------------------------------------------|
@@ -132,26 +147,28 @@
 | `file`               | File input field.                          | Can replace or display existing file.     |
 | Default              | Text input field.                          | May include a placeholder text.           |
 
+<br>
+
 - The images below show the differnet kind of fields that can be rendered by the MyInput component:
   
 **Basic Form Field**
 <br>
-<img src="../../../docs/images/myforms/basic-field.png" height="100">
+<img src="../../../images/myforms/basic-field.png" height="100">
 <br>
 
 **Text Area Field**
 <br>
-<img src="../../../docs/images/myforms/textarea-field.png" height="100">
+<img src="../../../images/myforms/textarea-field.png" height="100">
 <br>
 
 **Date Field**
 <br>
-<img src="../../../docs/images/myforms/date-field.png" height="100">
+<img src="../../../images/myforms/date-field.png" height="100">
 <br>
 
 **Multi-Select Field**
 <br>
-<img src="../../../docs/images/myforms/dropdown-field.png" height="100">
+<img src="../../../images/myforms/dropdown-field.png" height="100">
 <br>
 
 ### multistep-form.component.html
@@ -185,7 +202,7 @@
 
 - An additional feature is the header section that is used to show which form we're currently viewing or editing.
 <br>
-<img src="../../../docs/images/myforms/multistep-header.png">
+<img src="../../../images/myforms/multistep-header.png">
 <br>
 
 ## Supporting Components
@@ -196,6 +213,8 @@
   3. [NgxAuth](https://github.com/sisitech/sisitech-angular-auth/pkgs/npm/ngxs-auth)
 
 **Useful Links**
+<br>
+
 - [Overview](../myForms/overview.md): Introduction to myForms.
 - [Getting Started](../myForms/gettingStarted.md): Learn how to install and set up Sisitech Forms in your project.
 - [Usage](../myForms/usage.md): Discover how to create, customize, and work with forms using our library.
