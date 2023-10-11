@@ -30,5 +30,5 @@ npm install @sisitech/myform@0.3.1
 
 - [Overview](../myForms/overview.md): Introduction to myForms.
 - [Usage](../myForms/usage.md): Discover how to create, customize, and work with forms using our library.
-- [How it works](../myForms//howItWorks.md): Dive into the details of the library's functions, classes, and components.
+- [Under the Hood](../myForms/underTheHood.md): Dive into the details of the library's functions, classes, and components.
 - [Examples](../myForms/examples.md): See real-world examples of Sisitech Forms in action.
