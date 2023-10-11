@@ -329,6 +329,6 @@ export class AddPatientComponent implements OnInit, OnDestroy {
 - [Overview](../myForms/overview.md): Introduction to myForms.
 - [Getting Started](../myForms/gettingStarted.md): Learn how to install and set up Sisitech Forms in your project.
 - [Usage](../myForms/usage.md): Discover how to create, customize, and work with forms using our library.
-- [How it works](../myForms//howItWorks.md): Dive into the details of the library's functions, classes, and components.
+- [Under the Hood](../myForms/underTheHood.md): Dive into the details of the library's functions, classes, and components.
 - [Examples](../myForms/examples.md): See real-world examples of Sisitech Forms in action.
 - [FAQs](../myForms/faqs.md): Find answers to common questions and troubleshooting tips.

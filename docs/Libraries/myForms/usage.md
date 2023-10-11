@@ -111,7 +111,10 @@ export {
     filterOptions
 }
 ```
-- The form fields that will be used to render the form can be seen in the "POST" key of the "actions" dictionary. Each key-value pair in this dictionary represents the name of the field as well as the model constraints the field has.
+<br>
+
+- The form fields that will be used to render the form can be seen in the "POST" key of the "actions" dictionary. 
+- Each key-value pair in this dictionary represents the name of the field as well as the model constraints the field has.
 - Once we set up the options.ts file, next is to integrate the myForms library with our project using the options.ts file we just created.
 
 ## Backend Integration
@@ -286,14 +289,17 @@ section1: MyFormSection = {
 <img src="../../../images/myforms/single-form.png">
 
 ### Multi-step Form
-- For a multi-step form, we call the <sistch-multistep-form></sistch-multistep-form> in html as shown. As ypu can see, most of the inputs being passed to the multi-step form are being abstarcted in the [options] input to which we pass the multiStepForm variable we will soon define in the component file:
+- For a multi-step form, we call the <sistch-multistep-form></sistch-multistep-form> in html as shown. 
+- As you can see, most of the inputs being passed to the multi-step form are being abstarcted in the [options] input to which we pass the multiStepForm variable we will soon define in the component file:
 
 ``` html title="vaccines/add/add.component.html"
 <sistch-multistep-form [instance]="instance" (onPostedData)="onPatientCreated($event)" [options]="multiStepForm">
 </sistch-multistep-form>
 ```
 
-- The inputs being passed above in the html are defined in the component.ts file of this component. The code below shows an example of how these inputs are defined. In this case, we first define each individual section using a MyFormSection object. Once done, we create the multiStepForm variable that houses all our configurations:
+- The inputs being passed above in the html are defined in the component.ts file of this component. 
+- The code below shows an example of how these inputs are defined. 
+- In this case, we first define each individual section using a MyFormSection object. Once done, we create the multiStepForm variable that houses all our configurations:
 
 ``` ts
   filterOptions: any = filterOptions
@@ -375,5 +381,5 @@ section1: MyFormSection = {
 
 - [Overview](../myForms/overview.md): Introduction to myForms.
 - [Getting Started](../myForms/gettingStarted.md): Learn how to install and set up Sisitech Forms in your project.
-- [How it works](../myForms//howItWorks.md): Dive into the details of the library's functions, classes, and components.
+- [Under the Hood](../myForms/underTheHood.md): Dive into the details of the library's functions, classes, and components.
 - [Examples](../myForms/examples.md): See real-world examples of Sisitech Forms in action.
