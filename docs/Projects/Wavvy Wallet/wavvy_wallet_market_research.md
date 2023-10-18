@@ -1,6 +1,6 @@
 # Wavvy Wallet Market Research
 
-- An extension of Ali's breakdown on how to approach market research using interviews.[Ali's Article](../Ali/Conducting%20User%20Interviews.md)
+- An extension of Ali's breakdown on how to approach market research using interviews.[Ali's Article](../../Notes/Ali/Conducting%20User%20Interviews.md)
 
 ## Target Groups
 - The image below shows the different target groups we're targeting and the best way to approach market research for them.
@@ -43,4 +43,7 @@
 
 ## Influencer Cold Email Template
 [Influencer Cold Email Template](https://docs.google.com/document/d/1mvse3PSCA9HB0xCmU0jQxvVOUeiQF8g-PF7-6tLfoiU/edit?usp=sharing)
+
+## Lean Model Canvas
+[Wavvy Wallet Lean Model Canvas](https://drive.google.com/file/d/1llVCGekWa7qoGL7KVsKnvbh4WmoG7ZVK/view?usp=sharing)
 
