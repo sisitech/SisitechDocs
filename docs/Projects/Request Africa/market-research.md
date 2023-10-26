@@ -1,6 +1,6 @@
 # Request Africa Market Research
 
-Request Africa is a music discovery solution that uses an algorithm to listen to radio stations and download the songs played to YouTube. The discoveries are displayed on a dashboard as playlists and can be filtered by top 100 songs played in different radio stations and regions. Users can also get a list of songs similar to songs they like. They can then download the music and add it to their sets.
+Request Africa is a music discovery solution that uses an algorithm to listen to radio stations. The discoveries are displayed on a dashboard as playlists and can be filtered by top 100 songs played in different radio stations and regions. Users can also get a list of songs similar to songs they like. They can then download the music and add it to their sets.
 
 Request Africa has a number of unfair advantages over its competitors, including a proprietary algorithm, a team of experienced music industry professionals, and a strong network of partnerships. The company will be marketed through a variety of channels, including online advertising, social media marketing, public relations, content marketing, and partnerships with radio stations, record labels, and booking agencies.
 
