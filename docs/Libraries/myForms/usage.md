@@ -33,9 +33,6 @@ ng generate component add
 
 - Next, go to your specific API endpoint and click on the options button to get the options file. 
 
-!!! note
-    TODO: Update the image below to show the vaccines api endpoint
-
 <img src="../../../images/myforms/click-options.png" width="1000">
 
 - Once copied, define and export an options object in your options file
