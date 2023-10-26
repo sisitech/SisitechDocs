@@ -1,4 +1,4 @@
-# Request Africa Features
+# Request Africa Market Research
 
 Request Africa is a music discovery solution that uses an algorithm to listen to radio stations and download the songs played to YouTube. The discoveries are displayed on a dashboard as playlists and can be filtered by top 100 songs played in different radio stations and regions. Users can also get a list of songs similar to songs they like. They can then download the music and add it to their sets.
 
