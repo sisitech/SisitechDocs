@@ -4,7 +4,7 @@
 - Reactive forms provide a model-driven approach to handling form inputs whose values change over time using concepts such as FormControl.
 - Sisitech MyForms can be looked at as extension of Angular's [Reactive Forms](https://angular.io/guide/reactive-forms) component coupled with several [Angular Ng Directives](https://angular.io/guide/built-in-directives) to achieve the dynamic module we know and use today.
 - The easiest way to understand the inner workings of MyForms is to look at the html component of two key folders within the module i.e myform.component.html and multistep-form.component.html.
-- But first, let's dive into the folder structure of the MyForms module to know where different folders and files are located and also to understand teh importance of some of them.
+- But first, let's dive into the folder structure of the MyForms module to know where different folders and files are located and also to understand the importance of some of them.
 
 ## Folder Structure
 - The image below shows the folder structure of the MyForms library and a brief explanation of what each folder/file is about:
@@ -19,7 +19,7 @@
 |-----------------------|----------------------------------------------------------------------------------------------------------|
 | 🗒️ Myforms.component.html | The main myforms component files. The .html file contains the HTML code that renders the form on the frontend. |
 | 🗒️ Myforms.component.ts   | The .ts file contains the key functions and inputs that handle the data being passed through Myforms.    |
-| 🗒️ Myforms.component.scss |                                                                                                        |
+| 🗒️ Myforms.component.scss | Handles myforms styling                                                                                                       |
 | 🗒️ Myforms.interface.ts  | The interface.ts file contains the key classes representing data objects used in Myforms.             |
 | 🗒️ Myforms.module.ts    | The module.ts file contains the modules Myforms is dependent on.                                       |
 | 📁 multistep-form       | The folder that houses the multistep form component of the MyForms library.                             |
