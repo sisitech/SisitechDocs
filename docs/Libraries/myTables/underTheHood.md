@@ -10,7 +10,8 @@
 ## Folder Structure
 - The image below shows the folder structure of the MyTables library and a brief explanation of what each folder/file is about:
   <br>
- <img src="../../..images/mytables/MyTables-folder-structure-explained.png" height="600" width="1100">
+ <img src="../../../images/mytables/MyTables-folder-structure-explained.png" height="600" width="1100">
+
   <br>
 
 - The table below gives a more detailed breakdown of the key files in the structure above:
@@ -19,32 +20,21 @@
  | Folder/File               | Description                                                                                                      |
  | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
  | 🗒️ MyTables.component.html | The main MyTables component files. The .html file contains the HTML code that renders the table on the frontend. |
-
 | 🗒️ MyTables.component.ts   | The .ts file contains the key functions and inputs that handle the data to be shown on the tables    |
-
 | 🗒️ MyTables.component.scss | Handles mytables styling                                                                                                   |
-
 | 🗒️ MyTables.interface.ts  | The interface.ts file contains the key classes representing data objects used in MyTables.             |
-
 | 🗒️ MyTables.module.ts    | The module.ts file contains the modules MyTables is dependent on.                                       |
 | 🗒️ MyTables-state.service.ts    | The service.ts file contains the getters fro differnet data points in mytables.                                       |
-
 | 📁 action-view       | The `ActionViewComponent` is a component that is designed to render dynamic action buttons based on specified conditions. These action buttons trigger various actions, including data manipulation, by emitting events to the `TablesService`.                           |
-
 | 📁 delete-dialog              | The component defines the structure for a modal dialog component used for confirming the deletion of a specific item.                                |
-
 | 📁 mycelldisplay      | This component defines the structure for a dynamic display component, mycelldisplay, which renders content based on the valueType. It displays various content types differently, such as arrays, boolean values, and default values |
-
 | 📁 mypagination                | A supporting component that defines a pagination component, mypagination, which displays navigation controls for moving between pages of data.  |
-
 | 📁 mytd                | A supporting component that includes app-mycelldisplay, that is used to display cell values within a table or data grid.  |
-
 | 📁 single-view                | A component that provides the structure for displaying data in a carousel when no errors or loading are present, and switches to error or loading views based on conditions.  |
-
 | 🗒️ public.api.ts         | The file that exposes the different components within the MyTables library. Only the files listed here can be referenced by consumers of the library. |
 | 🗒️ ng.package.json       | The files that control the naming and versioning details of the MyTables library.                           |
  
-  <br>
+<br>
 
 
 ## Key Files & Components
@@ -57,7 +47,7 @@
 1. **Search and Export Section**: This section includes a search form for filtering the data and buttons to trigger data export.
 
 <br>
- <img src="../../..images/mytables/search.png" height="600" width="1100">
+ <img src="../../../images/mytables/search.png" height="600" width="1100">
 <br>
 
 1. **Toast Messages**: The `sistch-toast-list` component is used to display alert messages (toast notifications).
@@ -68,7 +58,7 @@
 
    - **Table Rows**: Data rows are generated dynamically based on the `results` array. Each cell in the table contains an `app-mytd` component, which can be clicked to perform actions.
 <br>
- <img src="../../..images/mytables/cell.png" height="600" width="1100">
+ <img src="../../../images/mytables/cell.png" height="600" width="1100">
 <br>
    - **Loading State**: When the data is being loaded, a loading indicator is shown, replacing the table.
 
@@ -77,13 +67,13 @@
 3. **Pagination Section**: At the bottom of the page, there is a pagination component (`app-mypagination`) for navigating between pages of data.
 
 <br>
- <img src="../../..images/mytables/pagination.png" height="600" width="1100">
+ <img src="../../../images/mytables/pagination.png" height="600" width="1100">
 <br>
 
 4. **Delete Dialog Modal**: A dialog modal (`sistch-tables-dialog`) is included for confirming delete actions, and it listens to various events to manage the delete operation.
    
 <br>
- <img src="../../..images/mytables/delete.png" height="600" width="1100">
+ <img src="../../../images/mytables/delete.png" height="600" width="1100">
 <br>
 
 
@@ -204,7 +194,7 @@
 - The DeleteDialogComponent is an Angular component used to handle and display a confirmation dialog for deleting items. 
   
 <br>
- <img src="../../..images/mytables/delete.png" height="600" width="1100">
+ <img src="../../../images/mytables/delete.png" height="600" width="1100">
 <br>
 
 - Key features and takeaways from this component include:
@@ -248,7 +238,7 @@
 - It adapts its display based on various conditions, including the availability of previous and next pages, and the total number of pages.
 
 <br>
- <img src="../../..images/mytables/pagination.png" height="600" width="1100">
+ <img src="../../../images/mytables/pagination.png" height="600" width="1100">
 <br>
 
 - The code block below shows an example of how it's called in table.component.html:
@@ -290,7 +280,7 @@
 - The component's main function is to render cell values according to the provided configuration, which can include handling different data types, applying display names, and handling array data.
 
 <br>
- <img src="../../..images/mytables/cell.png" height="600" width="1100">
+ <img src="../../../images/mytables/cell.png" height="600" width="1100">
 <br>
 
 - The code block shows an example usage in table.component.html:
