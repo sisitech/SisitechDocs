@@ -5,7 +5,7 @@
 
 1. Import the `TablesModule` from `@sisitech/tables` in your `app.module.ts`.
 
-  ```typescript
+```typescript
   import { TablesModule } from '@sisitech/tables';
 
   @NgModule({
@@ -14,7 +14,7 @@
       TablesModule.forChild(authConfig),
     ],
   })
-   ```
+```
 
 2. Configure `authConfig` with the appropriate authentication settings for your backend API.
 
