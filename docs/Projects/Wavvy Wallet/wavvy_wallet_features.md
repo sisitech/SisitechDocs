@@ -107,3 +107,5 @@ Incorporating a psychological assessment element related to a user's relationshi
 [Sahi, S.K. (2023), "Understanding gender differences in money attitudes: biological and psychological gender perspective](https://www.emerald.com/insight/content/doi/10.1108/IJBM-08-2022-0352/full/html)
 
 [Enhancing user engagement: The role of gamification in mobile apps by Paula Bitrián](https://www.sciencedirect.com/science/article/pii/S0148296321002666)
+
+[Top 5 Gamification Techniques to boost your SaaS | UI/UX Gamification](https://www.youtube.com/watch?v=EC7ZQObLBv8&ab_channel=Cieden)
