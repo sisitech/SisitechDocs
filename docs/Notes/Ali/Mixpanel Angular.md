@@ -43,11 +43,46 @@ Mixpanel has revolutionized the way businesses track user interactions and engag
 3. **Obtain a Mixpanel Project Token:**  
    Set up a project on Mixpanel to retrieve your project token.
 
-By following the above steps, Mixpanel should now be set up in your Angular project.
+4. **MixPanel User Profiles**
+
+User Profiles let you enrich events with properties about the users that performed those events. Profiles are optional; we recommend starting with events and only adding Profiles if you need it.
+
+Mixpanel's Users page allows you to filter users and gain a deeper understanding of how they interact with your website or application. By filtering your users into groups called cohorts, you can import these cohorts into other reports and perform analyses on those specific users.
+
+![Mixpanel Users](../../images/mixpanel%20users.jpg "Mixpanel Users")
+
+### Identifying first time user logins
+#### Impelementing in your Angular Login Button
+
+```typescript
+this.auth.login(this.form.value).subscribe(res => {
+  this.loaderStatus = false
+  const user = res as any; // pass the result to the user object
+  if (environment.production) { // check that mixpanel only tracks on the production environment
+    mixpanel.identify(user.id); // identify a unique user 
+    mixpanel.people.set({
+      '$username': user.username, // set custom username proerty to match current username
+      '$email': user.email, // set custom email proerty to match current email
+      '$last_login': new Date(), // set custom last login date to match current login date
+    })
+  }
+
+  // this.router.navigate(['/'])
+
+}, err => {
+  //this.loaderStatus = false
+  //this.loginError = err
+})
+```
+#### Mixpanel Custom Users Page
+
+![Mixpanel Custom Users Page](../../images/mixpanel-users-custom.png "Mixpanel Custom Users Page")
+
 
 ### References
 - [Mixpanel for Angular](https://medium.com/@jeffreyyy/mixpanel-for-angular-e0c0d8c08d3a)
 - [Mixpanel Documentation](https://docs.mixpanel.com/docs/getting-started/what-is-mixpanel)
+- [Mixpanel Users](https://docs.mixpanel.com/docs/analysis/users)
 
 ### Additional Research
 - Integration of granular event tracking in addition to route tracking like button clicks (Features should be added to all Sisitech library features)
