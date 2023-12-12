@@ -412,6 +412,15 @@ networks:
   agent-network:
 ```
 
+
+!!! note
+    Make sure traefik routers have explicit services set. One for the dashboard and the other for metrics..
+    Metrics Router
+    ` - "traefik.http.routers.traefikmetrics.service=traefikmetrics"`
+    Metrics Router
+    `- "traefik.http.routers.traefikae.service=traefikae"`
+
+
 ### Prometheus config
 ```yml title="/etc/prometheus/prometheus.yml"
 global:
