@@ -3,7 +3,7 @@
 - Welcome to **Sisitech Flutter Forms**, your go-to library for simplifying form management in cross platform development.
 - Built as an evolution of [Sisitech MyForms](https://sisitech.github.io/SisitechDocs/Libraries/myForms/overview/) initially designed for Angular, Sisitech Flutter Forms streamline your form-related tasks with ease and efficiency while bringing a seamless offline-first approach to Flutter development.
 
-> > > > IMAGE OF FLUTTER FORMS -------------------------------------
+<img src="../../../images/flutterForms/loginForm.jpg" width="500">
 
  <br>
 
@@ -28,13 +28,63 @@ flutter_form:
     url: git@github.com:sisitech/flutter-forms.git
 ```
 
+### Adding Dependencies to pubspec.yaml
+
+- Flutter forms has two key dependencies i.e [GetX](https://pub.dev/packages/get) and flutter_utils by Sisitech.
+
+**GetX package**
+
+```yaml
+get: ^4.6.5
+```
+
+**flutter_utils package**
+
+```yaml
+flutter_form:
+  git:
+    url: git@github.com:sisitech/flutter-forms.git
+```
+
 - Save the file to run `flutter pub get` which will fetch the package from Sisitech's repository.
 - Once done, VOILA! you have installed the package in your project!
 
 ## Usage
 
 - This section aims to demonstrate how to create a simple form in flutter using Flutter Forms. We will be using the login use case for an application to demonstrate it's use.
-- Creating a form with Flutter Forms is pretty straightforward. The widget name for FLutter Forms is `MyCustomForm`. The sample code below shows the example usage described above:
+- Creating a form with Flutter Forms is pretty straightforward. The steps outlined below shows the example usage described above.
+
+### Controller Initialization
+
+- First is to initialise the controllers from flutter_forms necessary to make MyCustomForm run.
+- The `APIConfig` controller is used to define the API details for the HTTP calls to be made by the forms.
+- The `NetworkStatusController` is used to access functions to do with checking internet connections to manage the offline-first quality of flutter_forms.
+- The `OfflineHttpCacheController`is used to manage the http calls that are stored by flutter_forms when the device is offline.
+- The three controllers are initialised using `Get.put` in `main.dart`. The code block below shows an example of how to do so:
+
+```dart title="main.dart"
+void main() async {
+  ...
+
+  Get.put<APIConfig>(
+    APIConfig(
+        apiEndpoint: "https://dukapi.roometo.com",
+        version: "api/v1",
+        clientId: "NUiCuG59zwZJR14tIdWD7iQ5ILFnpxbdrO2epHIG",
+        tokenUrl: 'o/token/',
+        grantType: "password",
+        revokeTokenUrl: 'o/revoke_token/'),
+  );
+  Get.put(NetworkStatusController());
+  Get.put(OfflineHttpCacheController());
+
+  ...
+}
+```
+
+### Dart Code
+
+- Next is to define the widget for FLutter Forms i.e. `MyCustomForm` and the associated parameters. The code block shows how to do so:
 
 ```dart title="auth/login/login.dart"
     MyCustomForm(
@@ -81,47 +131,6 @@ flutter_form:
     )
 ```
 
-<br>
-
-```dart title="auth/login/loginOptions.dart"
-const loginOptions = {
-  "name": "List Create Shops Api",
-  "description": "",
-  "renders": ["application/json", "text/html"],
-  "parses": [
-    "application/json",
-    "application/x-www-form-urlencoded",
-    "multipart/form-data"
-  ],
-  "actions": {
-    "POST": {
-      "username": {
-        "type": "string",
-        "required": false,
-        "read_only": false,
-        "label": "Username",
-        "max_length": 45,
-        "placeholder": "School emis Code / Phone number"
-      },
-      "password": {
-        "type": "string",
-        "required": true,
-        "read_only": false,
-        "label": "Password",
-        "obscure": true,
-        "max_length": 25
-      }
-    }
-  }
-};
-```
-
-- The code above renders the following screen:
-
-> > > > IMAGE OF LOGIN SCREEN -------------------------------------
-
-<br>
-
 - MyCustomForm takes several parameters, few of which are required. The table below highlights all the parameters and details about them:
 
 | Parameters                      | Is Required | Description                                                                                                                   | Example                                       | Default Value                                 |
@@ -160,6 +169,49 @@ const loginOptions = {
 | instance                        | X           | Instance of data to be used to determine instance URLs or form data details.                                                  | [Appendix: Instance](#example-instance)       | [Appendix: Instance](#example-instance)       |
 | submitButtonPreText             | X           | Additional text to display before the submit button.                                                                          | `"Confirm"`                                   | -                                             |
 | contentType                     | X           | Content type for form data submission (e.g., `ContentType.json`).                                                             | `ContentType.form` or `ContentType.json`      | `ContentType.json`                            |
+
+### Options File
+
+- The options file is used to determine the properties the input form fields in our form will have. The code block below shows how to define an options to be passed to `form_items`:
+
+```dart title="auth/login/loginOptions.dart"
+const loginOptions = {
+  "name": "List Create Shops Api",
+  "description": "",
+  "renders": ["application/json", "text/html"],
+  "parses": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "actions": {
+    "POST": {
+      "username": {
+        "type": "string",
+        "required": false,
+        "read_only": false,
+        "label": "Username",
+        "max_length": 45,
+        "placeholder": "School emis Code / Phone number"
+      },
+      "password": {
+        "type": "string",
+        "required": true,
+        "read_only": false,
+        "label": "Password",
+        "obscure": true,
+        "max_length": 25
+      }
+    }
+  }
+};
+```
+
+- The code above renders the following screen:
+
+<img src="../../../images/flutterForms/loginForm.jpg" width="500">
+
+<br>
 
 > **Useful Links:** > <br>
 

@@ -6,13 +6,13 @@ This section explains the inner workings of Sisitech Flutter Forms. In essence, 
 2. [Form Fields](#form-fields): A collection of TextFormFields that take up input (most are based off ReactiveTextField component from the [reactive_forms](https://pub.dev/packages/reactive_forms) package while the rest are custom made from Flutter's TextFormField widget).
 3. [Form Submit Button](#form-submit-button): A widget that provides the onSubmit button functionality as well as errors arising from form validation and submission.
 
-> > > > IMAGE OF FLUTTER FORM COMPONENTS -------------------------------------
+<img src="../../../images/flutterForms/loginForm.jpg" width="500">
+
+<br>
 
 ## Form Header
 
 - This is the part of the form that let's the user know what the form is about. In most cases it simply contains the form title, but it can be further modified to even show instructions, form progress among other details.
-
-> > > > IMAGE OF FLUTTER FORM HEADER -------------------------------------
 
 > **Note:** <br>
 >
@@ -122,7 +122,9 @@ const loginOptions = {
 | `choice` or `field` | Displays a drop down input field                                                                                                             |
 | `email`             | For email input. Has special validation for email only input                                                                                 |
 
-> > > > IMAGE OF DIFFERENT INPUT FIELDS -------------------------------------
+<img src="../../../images/flutterForms/FormFieldInputTypes.png" width="500">
+
+<br>
 
 > **Note:** <br>
 >
@@ -133,6 +135,11 @@ const loginOptions = {
 ## Form Submit Button
 
 - To put it simply, this is where all the important stuff happens. This section displays the button, as well as the validation or submission errors from the form.
+
+<img src="../../../images/flutterForms/button.jpg" width="500">
+
+<br>
+
 - We start with the parameters that the button itself uses and then delve into what happens `onSubmit()`.
 
 1. **name:**
@@ -175,9 +182,9 @@ const loginOptions = {
 
 - Now we take a look at what happens when the button is pressed and onSubmit is triggered. The diagram below shows the process flow and the related function and boolean parameters used during onSubmit.
 
-<img src="../../../images/myforms/flutterFormsOnSubmit-Page-1.png">
+<img src="../../../images/flutterForms/flutterFormsOnSubmit-Page-1.png">
 <br>
-<img src="../../../images/myforms/flutterFormsOnSubmit-Page-2.png">
+<img src="../../../images/flutterForms/flutterFormsOnSubmit-Page-2.png">
 ---
 
 ---

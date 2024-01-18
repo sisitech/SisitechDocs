@@ -86,9 +86,9 @@ const loginOptions = {
 
 ### Final Output
 
-> > > > IMAGE OF LOGIN SCREEN -------------------------------------
+<img src="../../../images/flutterForms/loginForm.jpg" width="500">
 
----
+<br>
 
 ## Add User Form
 
@@ -298,4 +298,4 @@ const teacherOptions = {
 
 ### Final Output
 
-> > > > IMAGE OF ADD USER SCREEN -------------------------------------
+<img src="../../../images/flutterForms/teacherForm.jpg" width="500">
