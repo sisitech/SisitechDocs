@@ -1,7 +1,7 @@
 # Overview
 
-- Welcome to [Sisitech MyForms](https://github.com/orgs/sisitech/packages/npm/package/myform), your go-to library for simplifying form management in web development. 
-- Sisitech Forms is a powerful aVnd versatile forms library designed to streamline the way users interact with web pages by facilitating the submission of data to servers for processing. 
+- Welcome to [Sisitech MyForms](https://github.com/orgs/sisitech/packages/npm/package/myform), your go-to library for simplifying form management in web development.
+- Sisitech Forms is a powerful and versatile forms library designed to streamline the way users interact with web pages by facilitating the submission of data to servers for processing.
 
 <img src="../../../images/myforms/multi-form.png" height="600" width="1000">
 
