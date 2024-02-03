@@ -19,3 +19,6 @@ Apache Superset is an open-source software application for data exploration and 
 - Message queue (Celery, Redis, RabbitMQ, SQS, etc.),
 - Results backend (Redis, S3, Memcached, etc.),
 - Caching layer (Redis, Memcached, etc.)
+
+### Installation
+
