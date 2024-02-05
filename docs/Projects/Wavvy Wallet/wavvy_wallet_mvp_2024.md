@@ -22,6 +22,7 @@ Kenya's mobile money ecosystem, dominated by Safaricom's M-Pesa with a 95% marke
 4. **Machine Learning for Auto-tagging:** Implements AI to streamline tagging, minimizing user effort.
 5. **Budget and Group Tracking:** Facilitates budget setting and tracks group contributions, ideal for personal and chamas.
 6. **Financial Literacy:** Provides educational content to enhance user knowledge on financial management.
+7. **Gamification of Tagging features** This is to make the process of tagging more enjoyable i.e. via a leadeerboard.
 
 ### Development Insights
 
