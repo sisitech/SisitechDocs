@@ -70,7 +70,44 @@ In order to get an instance of your customTheme anywhere in your code, use:
 var sisitechTheme = Theme.of(context).extension<SisitechThemeExtension>();
 ```
 
-### Step 3: Example Implementation in a custom widget of the library
+### Step 3: Setting default values for your customTheme
+``` dart
+class OnboardingPageWidget extends StatelessWidget {
+  final String title;
+  final String description;
+  final String imagePath;
+  final Widget? child;
+
+  const OnboardingPageWidget({
+    Key? key,
+    required this.title,
+    required this.description,
+    required this.imagePath,
+    this.child,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    if (child != null) {
+      return child!;
+    }
+    var onBoardingTheme =
+        Theme.of(context).extension<SisitechOnboardingTheme>();
+
+    // Applying  Default Styles
+    var titleStyle =
+        onBoardingTheme?.titleStyle ?? Theme.of(context).textTheme.titleMedium;
+
+    return Text(
+              title,
+              style: titleStyle,
+    )
+  }
+}
+```
+
+
+### Step 4: Example Implementation in a custom widget of the library
 
 ``` dart
 library sistch_fl_lib;
@@ -111,7 +148,7 @@ class SistchCustomWidget extends StatelessWidget {
 }
 ```
 
-### Step 4: Usage in your project
+### Step 5: Usage in your project
 There are two methods: 
 
 1. Define the custom extension as part of your themeData in your main.dart
@@ -128,13 +165,11 @@ There are two methods:
         /* dark theme settings */
       ),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-        useMaterial3: true,
         extensions: const <ThemeExtension<dynamic>>[
-          // SisitechThemeExtension(
-          //   backgroundColor: Colors.blue,
-          //   titleStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          // ),
+          SisitechThemeExtension(
+            backgroundColor: Colors.blue,
+            titleStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
         ],
       )
 ```
@@ -156,7 +191,7 @@ Theme(
 )
 ```
 
-### Step 5: Complete Example
+### Step 6: Complete Example
 ``` dart
 import 'package:flutter/material.dart';
 import 'package:sistch_fl_lib/sistch_fl_lib.dart';
