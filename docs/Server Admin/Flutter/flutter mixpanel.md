@@ -30,6 +30,32 @@ void main() async {
 }
 ```
 
+In order to track an event, fetch the **MixPanelController** using GetX. Ensure you use try and catch in case miXpanel is not initialized. 
+
+``` dart
+  Widget build(BuildContext context) {
+    bool mixPanelEnabled = false;
+    MixPanelController? mixCont;
+    try {
+      mixCont = Get.find<MixPanelController>();
+      mixPanelEnabled = true;
+    } catch (e) {
+      mixPanelEnabled = false;
+    }
+```
+
+pass the **track()** property as below in your **onPressed()** function to start tracking an event. 
+
+``` dart
+  onTap: () {
+    item.onTap();
+    mixCont?.track(
+      "drawer_item_pressed",
+      properties: {"item_title": item.title},
+    );
+  },
+```
+
 **NOTE: All tracking happens in the specific Sisitech library. In order to expand a feature you will need to do it in the library.**
 
 ### Under The Hood
