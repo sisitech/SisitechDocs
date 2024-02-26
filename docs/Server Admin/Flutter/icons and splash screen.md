@@ -31,11 +31,13 @@ flutter_launcher_icons:
 #### Step 2: Run the package
 
 After setting up the configuration, all that is left to do is run the package
-
+åß
 ``` dart
 flutter pub get
 flutter pub run flutter_launcher_icons
 ```
+
+**NOTE: In order to creative adaptive icons for android pa**
 
 ### Splash Screen
 #### Step 1: Configuring a splash screen
