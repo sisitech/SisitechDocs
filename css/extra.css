@@ -1,0 +1,21 @@
+:root {
+  --md-primary-fg-color: #09565f;
+  --md-primary-fg-color--light: #09565f;
+  --md-primary-fg-color--dark: #09565f;
+  --md-accent-fg-color: #09565f;
+}
+
+@page {
+  size: a4 portrait;
+  margin: 25mm 10mm 25mm 10mm;
+  counter-increment: page;
+  white-space: pre;
+  color: grey;
+  @bottom-center {
+    content: "Page " counter(page);
+  }
+}
+
+.gsc-main {
+  font-size: 4px;
+}
