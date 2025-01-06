@@ -50,6 +50,11 @@ flutter create .
     If it's a `library` switch into the example folder before recreating.
     `cd example_folder`
 
+## Copy the andorid `res` folder
+```bash
+rm -rf android/app/src/main/res
+cp -r android/app/src/main/res android/app/src/main/
+```
 ## Create a pro-guard rules file 
 Create a `android/app/proguard-rules.pro` file
 ```txt title="android/app/proguard-rules.pro"
