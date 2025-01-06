@@ -12,7 +12,7 @@
     git:
       url: git@github.com:sisitech/flutter_auth.git
       ref: "67872f9"
-      
+
   flutter_form:
     git:
       url: git@github.com:sisitech/flutter-forms.git
@@ -22,6 +22,16 @@
     git:
       url: git@github.com:sisitech/flutter-tables.git
       ref: "a24c8cb"
+
+  flutter_login:
+    git:
+      url: git@github.com:sisitech/flutter_login.git
+      ref: "2870a15"
+
+  sistch_fl_onboarding:
+    git:
+      url: git@github.com:sisitech/flutter_onboarding.git
+      ref: "adeb6b7"
 ---
 ```
 
