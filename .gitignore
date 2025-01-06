@@ -2,3 +2,4 @@
 
 # Rust build folder
 **/target/
+.codegpt
