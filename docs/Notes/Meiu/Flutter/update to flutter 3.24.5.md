@@ -1,5 +1,36 @@
-## Update all the Sisitech flutter libs packages to branch `update_flutter`
+## Update Your flutter installation
+Install Java 17
+```bash
+brew install openjdk@17
+```
+Set this as the new JAVA_HOME in `.bash_profile` or `.zshrc`
 
+```bash title=".zshrc"
+#export JAVA_HOME=/opt/homebrew/opt/openjdk@11
+export JAVA_HOME=/opt/homebrew/opt/openjdk@17
+```
+
+
+
+Navigate to your flutter installation folder
+```bash
+cd ~/Downloads/Flutter
+```
+Git checkout to version 3.24.5
+ ```bash
+ git checkout tags/3.24.5
+ ```
+Run flutter doctor to make sure everthing works
+
+```bash
+flutter doctor -v
+```
+
+
+# Migrate Existing Applications/Libraries
+
+## Update all the Sisitech flutter libs packages to branch `update_flutter`
+Here are the `update_flutter` branch commits for sisitech libraries
 ```yaml title="pubspec.yaml"
 ---
 
@@ -51,9 +82,10 @@ flutter create .
     `cd example_folder`
 
 ## Copy the andorid `res` folder
+This contains your app icons 
 ```bash
 rm -rf android/app/src/main/res
-cp -r android/app/src/main/res android/app/src/main/
+cp -r android_old/app/src/main/res android/app/src/main/
 ```
 ## Create a pro-guard rules file 
 Create a `android/app/proguard-rules.pro` file
@@ -97,6 +129,13 @@ allprojects {
 ```
 
 ## Move over any permission required to the new `AndroidManifest.xml` permissions and other settings
+This includes 
+
+1. The permissions
+1. Any receivers for instance sms
+1. The application label
+1. The application Icon 
+
 
 ## Clean the project
 ```bash
