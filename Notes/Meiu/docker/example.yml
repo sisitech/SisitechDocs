@@ -1,0 +1,37 @@
+services:
+  webserver:
+    image: nginx
+    ports:
+      - 8080:80
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd:24224
+        fluentd-async-connect: 1
+        tag: httpd.nginx
+
+  fluentd:
+    image: papirkurvendk/fluentd-influxdb
+    volumes:
+      - fluentd:/fluentd/log
+    ports:
+      - 24224:24224
+      - 24224:24224/udp
+
+  influxdb:
+    image: influxdb
+    volumes:
+      - influx:/var/lib/influxdb
+
+  grafana:
+    image: grafana/grafana:5.3.4
+    ports:
+      - 0.0.0.0:3000:30000
+
+    volumes:
+      - grafana:/var/lib/grafana
+
+volumes:
+  fluentd:
+  grafana:
+  influx:

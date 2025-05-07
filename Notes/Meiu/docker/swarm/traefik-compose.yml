@@ -1,0 +1,179 @@
+version: "3.9"
+
+services:
+  traefika:
+    image: traefik:latest
+    command:
+      - --log.level=DEBUG
+      - --entrypoints.httpa.address=:80
+      - --providers.docker=true
+      - --providers.docker.exposedByDefault=true
+      - --providers.docker.swarmMode=true
+      - --api=true
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --accesslog=true
+      - --providers.docker.watch=true
+      ## MEtrics
+      - --metrics.prometheus=true
+      - --entryPoints.metrics.address=:8082
+      - --metrics.prometheus.buckets=0.1,0.3,1.2,5.0
+      - --metrics.prometheus.addEntryPointsLabels=true
+      - --metrics.prometheus.addrouterslabels=true
+      - --metrics.prometheus.addServicesLabels=true
+      - --metrics.prometheus.entryPoint=metrics
+
+    networks:
+      - ovencrypt
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    ports:
+      - 80:80
+
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.traefikae.rule=Host(`traefik.example.com`)"
+        - "traefik.http.services.traefikae.loadbalancer.server.port=8080"
+        - "traefik.http.routers.traefikae.service=traefikae"
+        - "traefik.docker.network=ovencrypt"
+        - "traefik.http.middlewares.traefikae-auth.basicauth.users=micha:$$2y$$05$$NrR4hl3V7uCFT8nOdc5ZC.1AHuTjx4ysafhpBe2s0xX12eCG81VUO"
+        - "traefik.http.routers.traefikae.middlewares=traefikae-auth,traefikae-compress"
+        - "traefik.http.middlewares.traefikae-compress.compress=true"
+
+        - "traefik.http.routers.metrics.rule=Host(`metrics.example.com`)"
+        - "traefik.http.services.metrics.loadbalancer.server.port=8082"
+        - "traefik.http.routers.metrics.service=metrics"
+        # - "traefik.http.routers.metrics.middlewares=traefikae-auth"
+
+  net:
+    image: praqma/network-multitool
+    networks:
+      - ovencrypt
+
+    deploy:
+      mode: global
+
+  nginxa:
+    image: nginx
+
+    networks:
+      - ovencrypt
+
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.role == worker
+
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.nginxa.rule=Host(`example.com`)"
+        - "traefik.http.services.nginxa.loadbalancer.server.port=80"
+        - "traefik.docker.network=ovencrypt"
+
+  process_tasks:
+    image: michameiu/moekeapi:v2
+    deploy:
+      replicas: 1
+    networks:
+      - ovencrypt
+    command: python manage.py process_tasks
+
+  api:
+    image: michameiu/moekeapi:v2
+
+    networks:
+      - ovencrypt
+
+    command: gunicorn wvapi.wsgi:application --workers=2 --timeout=120  -b 0.0.0.0:8000
+
+    deploy:
+      replicas: 2
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.api.rule=Host(`api.example.com`)"
+        - "traefik.http.services.api.loadbalancer.server.port=8000"
+        - "traefik.docker.network=ovencrypt"
+
+  prometheus:
+    image: prom/prometheus
+    networks:
+      - ovencrypt
+
+    volumes:
+      - prometheus:/prometheus
+
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.prometheus.rule=Host(`prometheus.example.com`)"
+        - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+        - "traefik.docker.network=ovencrypt"
+
+      placement:
+        constraints:
+          - node.role == manager
+
+  registry:
+    image: registry
+    networks:
+      - ovencrypt
+
+    volumes:
+      - registry:/var/lib/registry
+
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.registry.rule=Host(`registry.example.com`)"
+        - "traefik.http.services.registry.loadbalancer.server.port=5000"
+        - "traefik.docker.network=ovencrypt"
+
+      placement:
+        constraints:
+          - node.role == manager
+
+  visualizer:
+    image: dockersamples/visualizer
+
+    networks:
+      - ovencrypt
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.role == manager
+
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.visualizer.rule=Host(`swarm.example.com`)"
+        - "traefik.http.services.visualizer.loadbalancer.server.port=8080"
+        - "traefik.docker.network=ovencrypt"
+        - "traefik.http.routers.visualizer.middlewares=traefikae-auth"
+
+volumes:
+  registry:
+
+  prometheus:
+
+  agent-volume:
+
+  portainer-data:
+
+networks:
+  ovencrypt:
+    external: true
+    attachable: true
+
+  agent-network:
