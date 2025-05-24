@@ -7,4 +7,8 @@
 - JS gives HTML designers a programming tool.
 - JS can put dynamic texts into an HTML page.
 - JS can read and write HTML elememts.
-- 
+## _JAVASCRIPT VARIABLES_.
+- Variables are 'containers' for storing information.
+- Js variables are used to hold values or expressions.
+- A variable can have a short name, like x, or a more descriptive name like carname.
+- Rules for Javascript variable names;
