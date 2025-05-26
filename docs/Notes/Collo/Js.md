@@ -43,4 +43,15 @@
   1. Can be used in conditional statements to compare values and take action depending on the results
 ### Logical operators.
 - Are used to determine the logic between values or variables.
+- Given that x=6 & y=3, the table below explains the logical operators.
+  | Operator | Description| Examples|
+  |:----------|:-----------------:|------------|
+  | &&        | and               | (x<10 && y>1) is true |
+  | ||        | or                | (x==5 || y==5) is false|
+  | !         | not               | !(x==y) is false      |
+### Conditional operators.
+- Javascript contains a conditional operator that assigns a value to a variable based on some conditions.
+### Conditional statements.
+- In javascript we have the following conditional statements:
+
   
